@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Architecture Notes | Swapnil Popat</title>
+  <meta name="description" content="Architecture notes by Swapnil Popat on IIoT, digital twins, smart factory platforms, ThingWorx, enterprise architecture, ISA-95, DevOps, and industrial integrations." />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MF80VFT89Z', {
+      anonymize_ip: true
+    });
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">Swapnil Popat</a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/writing/">Writing</a>
+        <a href="/architecture-notes/">Architecture Notes</a>
+        <a href="/resume/">Resume</a>
+        <a href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Architecture Notes</p>
+      <h1>Patterns, Principles & Technical Decision Notes</h1>
+      <p>
+        Practical architecture thinking for industrial IoT, smart factory platforms,
+        enterprise integrations, digital twins, DevOps, and AI-enabled manufacturing systems.
+      </p>
+    </section>
+
+    <section class="cards-grid">
+      <article class="card">
+        <span class="tag">Principle</span>
+        <h2>Design for Loose Coupling</h2>
+        <p>
+          Avoid hidden dependencies between platform services, UI layers, integration logic,
+          and external systems. Keep boundaries visible and intentional.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Pattern</span>
+        <h2>Digital Twin Modeling</h2>
+        <p>
+          Model assets, machines, lines, plants, and products using reusable templates
+          and clear inheritance rules. Keep behavior and data ownership explicit.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Integration</span>
+        <h2>MES ↔ ERP ↔ PLM Integration</h2>
+        <p>
+          Treat integration as a product capability, not as one-time plumbing.
+          Define ownership, event contracts, error handling, and observability from day one.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Standard</span>
+        <h2>ISA-95 Thinking</h2>
+        <p>
+          Use ISA-95 to clarify responsibilities across enterprise, operations,
+          control, and physical process layers.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">DevOps</span>
+        <h2>Observable IIoT Platforms</h2>
+        <p>
+          Industrial platforms need structured logs, health checks, metrics, dashboards,
+          alerting, and incident playbooks.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">AI</span>
+        <h2>AI in Manufacturing Architecture</h2>
+        <p>
+          AI should be introduced where data quality, feedback loops, business ownership,
+          and measurable value are clearly defined.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script src="/assets/js/analytics-events.js"></script>
+</body>
+</html>
