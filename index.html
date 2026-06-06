@@ -1,1 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Swapnil Popat | IT Solutions Architect & Industry 4.0 Leader</title>
+
+  <meta name="description" content="Swapnil Popat is an IT Solutions Architect and Team Lead specializing in Industry 4.0, IIoT, ThingWorx, smart factory architecture, enterprise architecture, and digital transformation." />
+  <meta name="keywords" content="Swapnil Popat, IT Solutions Architect, ThingWorx Architect, Industry 4.0, IIoT, Smart Factory, Enterprise Architecture, SAP LeanIX, ISA-95, Digital Twin, Pune India" />
+  <meta name="author" content="Swapnil Popat" />
+
+  <meta property="og:title" content="Swapnil Popat | IT Solutions Architect & Industry 4.0 Leader" />
+  <meta property="og:description" content="12+ years architecting scalable Industrial IoT, ThingWorx, PLM digitalization, and smart factory platforms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swapnilpopat.github.io" />
+
+  <meta name="theme-color" content="#0f172a" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0f172a;
+      --bg-card: rgba(15, 23, 42, 0.78);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: rgba(148, 163, 184, 0.22);
+      --brand: #38bdf8;
+      --brand-2: #22c55e;
+      --brand-3: #a78bfa;
+      --warning: #f59e0b;
+      --danger: #fb7185;
+      --shadow: 0 24px 80px rgba(0,0,0,0.38);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-soft: #ffffff;
+      --bg-card: rgba(255,255,255,0.86);
+      --text: #0f172a;
+      --muted: #475569;
+      --line: rgba(15, 23, 42, 0.14);
+      --shadow: 0 24px 80px rgba(15,23,42,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.22), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(167,139,250,0.20), transparent 26%),
+        radial-gradient(circle at 80% 80%, rgba(34,197,94,0.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(148,163,184,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148,163,184,0.045) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+      z-index: -2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .gradient-text {
+      background: linear-gradient(120deg, var(--brand), var(--brand-2), var(--brand-3));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      background: rgba(15,23,42,0.44);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      backdrop-filter: blur(16px);
+    }
+
+    [data-theme="light"] .badge {
+      background: rgba(255,255,255,0.68);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-2);
+      box-shadow: 0 0 16px var(--brand-2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.22s ease;
+      background: var(--bg-card);
+      color: var(--text);
+      box-shadow: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56,189,248,0.55);
+      box-shadow: 0 16px 40px rgba(56,189,248,0.12);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7, #22c55e);
+      color: white;
+      border: 0;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 42px rgba(34,197,94,0.22);
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      color: var(--brand);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 800;
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.7rem);
+      font-weight: 950;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.5vw, 3.8rem);
+      font-weight: 900;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 850;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .nav {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(var(--max), calc(100% - 32px));
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--line);
+      background: rgba(15,23,42,0.72);
+      backdrop-filter: blur(18px);
+      border-radius: 22px;
+      padding: 12px 14px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+    }
+
+    [data-theme="light"] .nav {
+      background: rgba(255,255,255,0.78);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: white;
+      font-weight: 950;
+      box-shadow: 0 12px 28px rgba(56,189,248,0.24);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a,
+    .theme-toggle {
+      color: var(--muted);
+      padding: 9px 11px;
+      border-radius: 12px;
+      font-weight: 750;
+      font-size: 0.92rem;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover,
+    .theme-toggle:hover {
+      color: var(--text);
+      background: rgba(148,163,184,0.12);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      border: 1px solid var(--line);
+      background: var(--bg-card);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 9px 12px;
+      font-weight: 900;
+    }
+
+    .hero {
+      padding: 150px 0 70px;
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 2vw, 1.34rem);
+      max-width: 780px;
+      margin: 22px 0 26px;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hero-panel {
+      position: relative;
+      min-height: 560px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+        var(--bg-card);
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 26px;
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 180deg, transparent, rgba(56,189,248,0.18), transparent, rgba(34,197,94,0.16), transparent);
+      animation: rotate 15s linear infinite;
+    }
+
+    .hero-panel-inner {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      border-radius: 28px;
+      background: rgba(2,6,23,0.64);
+      border: 1px solid var(--line);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    [data-theme="light"] .hero-panel-inner {
+      background: rgba(255,255,255,0.74);
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .terminal {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.84rem;
+      color: #cbd5e1;
+    }
+
+    [data-theme="light"] .terminal {
+      color: #334155;
+    }
+
+    .terminal-line {
+      display: flex;
+      gap: 9px;
+      margin-bottom: 12px;
+    }
+
+    .prompt {
+      color: var(--brand-2);
+      font-weight: 800;
+    }
+
+    .architecture-orbit {
+      height: 310px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin-top: 18px;
+    }
+
+    .orbit-center {
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: 950;
+      background: linear-gradient(135deg, rgba(56,189,248,0.28), rgba(34,197,94,0.28));
+      border: 1px solid rgba(56,189,248,0.42);
+      box-shadow: 0 0 60px rgba(56,189,248,0.16);
+    }
+
+    .orbit {
+      position: absolute;
+      border: 1px dashed rgba(148,163,184,0.32);
+      border-radius: 50%;
+      animation: spin 24s linear infinite;
+    }
+
+    .orbit.one {
+      width: 230px;
+      height: 230px;
+    }
+
+    .orbit.two {
+      width: 300px;
+      height: 300px;
+      animation-duration: 34s;
+      animation-direction: reverse;
+    }
+
+    .node {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 0.75rem;
+      font-weight: 900;
+      white-space: nowrap;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+    }
+
+    .n1 { top: 0; left: 50%; }
+    .n2 { top: 50%; left: 100%; }
+    .n3 { top: 100%; left: 50%; }
+    .n4 { top: 50%; left: 0; }
+    .n5 { top: 12%; left: 82%; }
+    .n6 { top: 82%; left: 82%; }
+    .n7 { top: 82%; left: 18%; }
+    .n8 { top: 12%; left: 18%; }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .stat-card {
+      border: 1px solid var(--line);
+      background: rgba(148,163,184,0.08);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.55rem;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .stat-card span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015)),
+        var(--bg-card);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: 0.24s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56,189,248,0.38);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(56,189,248,0.14);
+      color: var(--brand);
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      background: rgba(148,163,184,0.09);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .highlight-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .profile-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .profile-avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 34px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2), var(--brand-3));
+      font-size: 2rem;
+      font-weight: 950;
+      color: white;
+      box-shadow: 0 20px 70px rgba(56,189,248,0.22);
+      margin-bottom: 18px;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .focus-item {
+      display: flex;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(148,163,184,0.07);
+    }
+
+    .focus-item span {
+      color: var(--brand-2);
+      font-weight: 950;
+    }
+
+    .skill-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .skill-row {
+      margin-bottom: 15px;
+    }
+
+    .skill-meta {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 800;
+      margin-bottom: 7px;
+      font-size: 0.92rem;
+    }
+
+    .bar {
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(148,163,184,0.16);
+      border: 1px solid rgba(148,163,184,0.14);
+    }
+
+    .fill {
+      height: 100%;
+      width: var(--w);
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      border-radius: inherit;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 19px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(var(--brand), var(--brand-2), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 56px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 8px;
+      top: 22px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--bg-soft);
+      border: 4px solid var(--brand);
+      box-shadow: 0 0 28px rgba(56,189,248,0.35);
+      z-index: 2;
+    }
+
+    .timeline-card {
+      border: 1px solid var(--line);
+      background: var(--bg-card);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .date {
+      color: var(--brand);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(56,189,248,0.16), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(34,197,94,0.12), transparent 35%);
+      pointer-events: none;
+    }
+
+    .project-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-type {
+      display: inline-flex;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 900;
+      color: var(--brand-2);
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .project-block {
+      margin-top: 14px;
+    }
+
+    .project-block strong {
+      color: var(--text);
+      font-size: 0.88rem;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .cert-card {
+      border: 1px solid var(--line);
+      background: rgba(148,163,184,0.07);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .cert-card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cert-card span {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 190px;
+    }
+
+    .blog-card .read {
+      color: var(--brand);
+      font-weight: 900;
+      margin-top: 18px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-list a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--line);
+      background: rgba(148,163,184,0.07);
+      border-radius: 16px;
+      padding: 13px 14px;
+      color: var(--muted);
+      font-weight: 750;
+      transition: 0.2s;
+    }
+
+    .contact-list a:hover {
+      color: var(--text);
+      border-color: rgba(56,189,248,0.42);
+      transform: translateX(4px);
+    }
+
+    .availability {
+      border-left: 4px solid var(--brand-2);
+    }
+
+    footer {
+      padding: 34px 0 50px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2), var(--brand-3));
+      z-index: 2000;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .highlight-layout,
+      .skill-board,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        min-height: 480px;
+      }
+
+      .grid-3,
+      .grid-2,
+      .cert-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        border: 1px solid var(--line);
+        background: var(--bg-soft);
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .hero {
+        padding-top: 128px;
+      }
+
+      .hero-stats,
+      .grid-3,
+      .grid-2,
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        min-height: auto;
+      }
+
+      .architecture-orbit {
+        height: 270px;
+        transform: scale(0.86);
+      }
+
+      .section {
+        padding: 66px 0;
+      }
+
+      .nav {
+        top: 10px;
+        width: calc(100% - 20px);
+      }
+
+      .logo span:last-child {
+        display: none;
+      }
+
+      h1 {
+        font-size: clamp(2.55rem, 16vw, 4rem);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav">
+    <a href="#home" class="logo" aria-label="Swapnil Popat Home">
+      <span class="logo-mark">SP</span>
+      <span>Swapnil Popat</span>
+    </a>
+
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu">Menu</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">Theme</button>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="badge reveal">
+            <span class="badge-dot"></span>
+            IT Solutions Architect · Industry 4.0 · ThingWorx · EA Governance
+          </div>
+
+          <h1 class="reveal" style="margin-top:18px;">
+            Building <span class="gradient-text">Industrial IoT</span> systems that scale.
+          </h1>
+
+          <p class="hero-subtitle reveal">
+            I architect smart factory, PLM digitalization, digital twin, and IIoT platforms that connect
+            shop-floor reality with enterprise strategy — balancing architecture governance, delivery speed,
+            operational resilience, and measurable business value.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#projects">Explore Work</a>
+            <a class="btn" href="assets/SwapnilPopat_Resume.pdf" download>Download Resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+
+          <div class="hero-stats reveal">
+            <div class="stat-card">
+              <strong>12+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="stat-card">
+              <strong>7</strong>
+              <span>Team Members Led</span>
+            </div>
+            <div class="stat-card">
+              <strong>56+</strong>
+              <span>Machines Modeled</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Architecture animation">
+          <div class="hero-panel-inner">
+            <div class="terminal">
+              <div class="terminal-line"><span class="prompt">$</span><span>load architect-profile --name SwapnilPopat</span></div>
+              <div class="terminal-line"><span class="prompt">></span><span>ThingWorx · ISA-95 · Digital Twins · SAP LeanIX</span></div>
+              <div class="terminal-line"><span class="prompt">></span><span>MES ⇄ ERP ⇄ PLM integration topology initialized</span></div>
+              <div class="terminal-line"><span class="prompt">></span><span>architecture_governance: active</span></div>
+            </div>
+
+            <div class="architecture-orbit">
+              <div class="orbit-center">Industry<br>4.0</div>
+
+              <div class="orbit one">
+                <span class="node n1">ThingWorx</span>
+                <span class="node n2">OPC-UA</span>
+                <span class="node n3">MES</span>
+                <span class="node n4">PLM</span>
+              </div>
+
+              <div class="orbit two">
+                <span class="node n5">Azure</span>
+                <span class="node n6">K8s</span>
+                <span class="node n7">LeanIX</span>
+                <span class="node n8">AI APIs</span>
+              </div>
+            </div>
+
+            <div class="badge">
+              <span class="badge-dot"></span>
+              From technical discovery to production rollout
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Expertise</div>
+          <h2>Architecture leadership across the full Industry 4.0 stack.</h2>
+          <p style="margin-top:14px;">
+            Practical architecture experience across IIoT platforms, industrial connectivity, enterprise integration,
+            DevOps, cloud, observability, and people leadership.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card reveal">
+            <div class="service-icon">⚙️</div>
+            <h3>ThingWorx & IIoT Architecture</h3>
+            <p>
+              Digital twins, mashups, industrial data models, platform architecture, Navigate, Flow,
+              and scalable ThingWorx application delivery.
+            </p>
+            <div class="tag-list">
+              <span class="tag">ThingWorx</span>
+              <span class="tag">Navigate</span>
+              <span class="tag">Flow</span>
+              <span class="tag">Digital Twin</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon">🏭</div>
+            <h3>Smart Factory Integration</h3>
+            <p>
+              Shop-floor connectivity and enterprise integration using OPC-UA, MQTT, RabbitMQ,
+              MES, ERP, PLM, Kepware, and ISA-95-aligned architecture patterns.
+            </p>
+            <div class="tag-list">
+              <span class="tag">ISA-95</span>
+              <span class="tag">OPC-UA</span>
+              <span class="tag">MQTT</span>
+              <span class="tag">Kepware</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon">🧭</div>
+            <h3>Enterprise Architecture Governance</h3>
+            <p>
+              Architecture views, standards, guardrails, reviews, modular design, hidden coupling reduction,
+              and documentation for global stakeholders.
+            </p>
+            <div class="tag-list">
+              <span class="tag">SAP LeanIX</span>
+              <span class="tag">Sparx EA</span>
+              <span class="tag">arc42</span>
+              <span class="tag">SAP API Mgmt</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon">🚀</div>
+            <h3>DevOps & Platform Reliability</h3>
+            <p>
+              CI/CD pipelines, Git workflows, Jenkins automation, containerization, Kubernetes,
+              observability, logging, metrics, and alerting.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Jenkins</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Grafana</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon">☁️</div>
+            <h3>Cloud & AI Enablement</h3>
+            <p>
+              Azure, AWS, GCP, Oracle Cloud, Azure AI, Google AI, Claude, AI APIs, secure API design,
+              and architecture validation for AI-assisted industrial platforms.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Azure</span>
+              <span class="tag">AWS</span>
+              <span class="tag">GCP</span>
+              <span class="tag">AI APIs</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div class="service-icon">👥</div>
+            <h3>Team Leadership</h3>
+            <p>
+              Hiring, onboarding, mentoring, workload planning, technical workshops, performance reviews,
+              stakeholder communication, and vendor coordination.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Team of 7</span>
+              <span class="tag">Mentoring</span>
+              <span class="tag">Workshops</span>
+              <span class="tag">Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container highlight-layout">
+        <div class="card profile-card reveal">
+          <div>
+            <div class="profile-avatar">SP</div>
+            <div class="eyebrow">Profile</div>
+            <h2>Architect. Builder. Mentor.</h2>
+            <p style="margin-top:14px;">
+              Based in Pune, India, I focus on building resilient industrial platforms and guiding teams
+              toward clean, modular, maintainable architecture.
+            </p>
+          </div>
+
+          <div class="tag-list" style="margin-top:24px;">
+            <span class="tag">Pune, India</span>
+            <span class="tag">English</span>
+            <span class="tag">Gujarati</span>
+            <span class="tag">Hindi</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="eyebrow">Operating Principles</div>
+          <h2>My architecture approach</h2>
+
+          <div class="focus-list" style="margin-top:22px;">
+            <div class="focus-item">
+              <span>01</span>
+              <div>
+                <h3>Design for operational reality</h3>
+                <p>Architecture must survive real plant behavior, integration constraints, network limits, and production support needs.</p>
+              </div>
+            </div>
+
+            <div class="focus-item">
+              <span>02</span>
+              <div>
+                <h3>Reduce hidden coupling</h3>
+                <p>Clean boundaries, modular integrations, and review discipline reduce rework and improve long-term maintainability.</p>
+              </div>
+            </div>
+
+            <div class="focus-item">
+              <span>03</span>
+              <div>
+                <h3>Balance standards with delivery</h3>
+                <p>EA governance, ISA-95 alignment, DevOps automation, and agile execution must work together — not against each other.</p>
+              </div>
+            </div>
+
+            <div class="focus-item">
+              <span>04</span>
+              <div>
+                <h3>Grow capability, not dependency</h3>
+                <p>Strong teams scale architecture better than individual heroics. Documentation, workshops, and mentoring are part of delivery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Capability Map</div>
+          <h2>Deep hands-on capability with architecture-level thinking.</h2>
+        </div>
+
+        <div class="skill-board">
+          <div class="card reveal">
+            <h3>Technical Strengths</h3>
+
+            <div style="margin-top:22px;">
+              <div class="skill-row">
+                <div class="skill-meta"><span>ThingWorx Platform</span><span>Expert</span></div>
+                <div class="bar"><div class="fill" style="--w:96%"></div></div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta"><span>IIoT Architecture</span><span>Advanced</span></div>
+                <div class="bar"><div class="fill" style="--w:94%"></div></div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta"><span>Enterprise Architecture</span><span>Advanced</span></div>
+                <div class="bar"><div class="fill" style="--w:90%"></div></div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta"><span>DevOps & CI/CD</span><span>Advanced</span></div>
+                <div class="bar"><div class="fill" style="--w:86%"></div></div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta"><span>Cloud & AI Enablement</span><span>Strong</span></div>
+                <div class="bar"><div class="fill" style="--w:82%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Tools & Technologies</h3>
+            <div class="tag-list">
+              <span class="tag">SAP LeanIX</span>
+              <span class="tag">Sparx EA</span>
+              <span class="tag">Draw.io</span>
+              <span class="tag">arc42</span>
+              <span class="tag">ThingWorx 9.6.1</span>
+              <span class="tag">Navigate</span>
+              <span class="tag">Flow</span>
+              <span class="tag">Kepware</span>
+              <span class="tag">OPC-UA</span>
+              <span class="tag">MQTT</span>
+              <span class="tag">RabbitMQ</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Azure</span>
+              <span class="tag">AWS</span>
+              <span class="tag">GCP</span>
+              <span class="tag">Oracle Cloud</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Prometheus</span>
+              <span class="tag">Grafana</span>
+              <span class="tag">Splunk</span>
+              <span class="tag">React</span>
+              <span class="tag">Angular</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Python</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Supabase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Professional Journey</div>
+          <h2>From developer to Industry 4.0 architecture leader.</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>IT Solutions Architect & Team Lead</h3>
+                  <p>Schaeffler Technology Solutions India Pvt Ltd · Pune</p>
+                </div>
+                <div class="date">Aug 2023 — Present</div>
+              </div>
+              <p>
+                Leading a 7-member ThingWorx Development & Operations team while governing architecture,
+                coding standards, DevOps practices, SAP LeanIX / Sparx EA documentation, and smart factory platform delivery.
+              </p>
+              <div class="tag-list">
+                <span class="tag">ThingWorx 9.6.1</span>
+                <span class="tag">SAP LeanIX</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">SAP API Mgmt</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Senior / Lead Senior Developer</h3>
+                  <p>Cognizant Technology Solutions · Pfizer & Kohler</p>
+                </div>
+                <div class="date">Apr 2021 — Aug 2023</div>
+              </div>
+              <p>
+                Delivered smart factory dashboards, plant insights, production visibility platforms,
+                SAFe agile delivery, Kepware integration, and multi-environment deployment from Dev to Production.
+              </p>
+              <div class="tag-list">
+                <span class="tag">ThingWorx 9.x</span>
+                <span class="tag">Kepware</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">SAFe Agile</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>IT Analyst</h3>
+                  <p>Eaton Technologies Pvt Ltd · Pune</p>
+                </div>
+                <div class="date">Jun 2020 — Apr 2021</div>
+              </div>
+              <p>
+                Managed global rollouts of FSU use cases including RTPPM, AMU, and CWC across multiple plant sites,
+                coordinating platform support, external providers, and AR capability using PTC Vuforia.
+              </p>
+              <div class="tag-list">
+                <span class="tag">RTPPM</span>
+                <span class="tag">AMU</span>
+                <span class="tag">CWC</span>
+                <span class="tag">Vuforia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Consultant / Sr. Developer</h3>
+                  <p>Capgemini India Pvt Ltd · ABB, GE Industrial, Airbus</p>
+                </div>
+                <div class="date">Mar 2014 — May 2020</div>
+              </div>
+              <p>
+                Delivered OEE platforms, production dashboards, maintenance reports, escalation workflows,
+                customized ThingWorx widgets, and Windchill PLM integrations for manufacturing and aerospace programs.
+              </p>
+              <div class="tag-list">
+                <span class="tag">OEE</span>
+                <span class="tag">Proficy</span>
+                <span class="tag">AngularJS</span>
+                <span class="tag">Windchill</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Developer</h3>
+                  <p>Tatvasoft Co Sourcing Pvt. Ltd. · Ahmedabad</p>
+                </div>
+                <div class="date">Jul 2013 — Dec 2013</div>
+              </div>
+              <p>
+                Started professional software engineering journey after completing Computer Engineering from Atmiya University, Rajkot.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Selected Work</div>
+          <h2>Projects that show architecture, execution, and ownership.</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card project-card reveal">
+            <span class="project-type">ENTERPRISE · SCHAEFFLER</span>
+            <h3>AI-Driven Closed-Loop Component Quality Platform</h3>
+            <p>
+              Integrated ThingWorx digital twin models, Windchill PLM, PowerBI, Python, and AI APIs
+              to create a real-time industrial quality feedback concept.
+            </p>
+            <div class="project-block">
+              <strong>Architecture Value</strong>
+              <p>Validates technology fit, industrial data pipeline feasibility, and measurable quality feedback loops.</p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">ThingWorx</span>
+              <span class="tag">Windchill</span>
+              <span class="tag">PowerBI</span>
+              <span class="tag">Python</span>
+              <span class="tag">AI APIs</span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <span class="project-type">ENTERPRISE · TRACEABILITY</span>
+            <h3>TraceApp for Cross-Tool Requirement Traceability</h3>
+            <p>
+              MQTT/RabbitMQ-based integration linking Codebeamer, PTC RV&S, Sparx EA, and PTC Windchill
+              for PLM digitalization traceability.
+            </p>
+            <div class="project-block">
+              <strong>Architecture Value</strong>
+              <p>Improves engineering traceability across requirement, design, and PLM systems.</p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">MQTT</span>
+              <span class="tag">RabbitMQ</span>
+              <span class="tag">Codebeamer</span>
+              <span class="tag">Sparx EA</span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <span class="project-type">PERSONAL · CLOUD ARCHITECTURE</span>
+            <h3>IoT Telemetry Architecture Workbench</h3>
+            <p>
+              Full-stack Azure-deployed telemetry platform simulating device registration, telemetry ingestion,
+              history, alerting, and Angular dashboards.
+            </p>
+            <div class="project-block">
+              <strong>Architecture Value</strong>
+              <p>Demonstrates Spring Boot, Angular, PostgreSQL, Docker, OAuth2/JWT, Azure App Service, API Management, Key Vault, and secure API design.</p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Angular</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Azure</span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <span class="project-type">PERSONAL · FULL STACK</span>
+            <h3>ReferralNet</h3>
+            <p>
+              A full-stack referral networking platform built from scratch with Node.js, Express,
+              Vanilla JS SPA, HTML, CSS, and Ubuntu hosting.
+            </p>
+            <div class="project-block">
+              <strong>Live</strong>
+              <p><a href="https://referralnet.online/" target="_blank" rel="noopener">referralnet.online →</a></p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Ubuntu</span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <span class="project-type">PERSONAL · E-COMMERCE</span>
+            <h3>DealDash India</h3>
+            <p>
+              Lightweight e-commerce storefront with integrated admin panel, JSON APIs,
+              SQLite-backed data layer, and simple deployment model.
+            </p>
+            <div class="project-block">
+              <strong>Live</strong>
+              <p><a href="https://dealdashindia.store/" target="_blank" rel="noopener">dealdashindia.store →</a></p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="card project-card reveal">
+            <span class="project-type">PERSONAL · REACT</span>
+            <h3>Relationship Manager</h3>
+            <p>
+              Personal CRM built with React, Vite, Supabase, authentication, real-time database,
+              interaction logging, and relationship scoring.
+            </p>
+            <div class="project-block">
+              <strong>Live</strong>
+              <p><a href="https://relationshipmanager.online/" target="_blank" rel="noopener">relationshipmanager.online →</a></p>
+            </div>
+            <div class="tag-list">
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">BaaS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Credentials</div>
+          <h2>Certifications and continuous learning.</h2>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <strong>LeanIX Practitioner L2</strong>
+            <span>SAP · 2026</span>
+          </div>
+          <div class="cert-card reveal">
+            <strong>LeanIX Practitioner L1</strong>
+            <span>SAP · 2026</span>
+          </div>
+          <div class="cert-card reveal">
+            <strong>ThingWorx Developer Model Specialist</strong>
+            <span>PTC · 2025</span>
+          </div>
+          <div class="cert-card reveal">
+            <strong>ThingWorx Developer Exam</strong>
+            <span>PTC · 2025</span>
+          </div>
+          <div class="cert-card reveal">
+            <strong>Prompt Design in Vertex AI</strong>
+            <span>Google · 2025</span>
+          </div>
+          <div class="cert-card reveal">
+            <strong>BEET Business Excellence</strong>
+            <span>2025</span>
+          </div>
+          <div class="cert-card reveal">
+            <strong>AWS Cloud Practitioner</strong>
+            <span>AWS</span>
+          </div>
+          <div class="cert-card reveal">
+            <strong>Azure Fundamentals</strong>
+            <span>Microsoft</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="writing">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Writing</div>
+          <h2>Technical notes on architecture, AI, microservices, and digital transformation.</h2>
+          <p style="margin-top:14px;">
+            Selected writing topics from My Tricky Notes.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <a class="card blog-card reveal" href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">
+            <div>
+              <h3>Digital Twin Architecture</h3>
+              <p>What it is, how it works, and where it usually fails.</p>
+            </div>
+            <span class="read">Read on blog →</span>
+          </a>
+
+          <a class="card blog-card reveal" href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">
+            <div>
+              <h3>ISA-95 Explained</h3>
+              <p>A practical guide to ERP and MES integration.</p>
+            </div>
+            <span class="read">Read on blog →</span>
+          </a>
+
+          <a class="card blog-card reveal" href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">
+            <div>
+              <h3>Microservices in the AI Era</h3>
+              <p>Docker, Kubernetes, CI/CD, cloud, and scale.</p>
+            </div>
+            <span class="read">Read on blog →</span>
+          </a>
+
+          <a class="card blog-card reveal" href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">
+            <div>
+              <h3>TOGAF, Zachman and FEAF</h3>
+              <p>Enterprise architecture frameworks in the age of AI.</p>
+            </div>
+            <span class="read">Read on blog →</span>
+          </a>
+
+          <a class="card blog-card reveal" href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">
+            <div>
+              <h3>Service Mesh vs Message Broker</h3>
+              <p>Inter-service communication decisions in microservices.</p>
+            </div>
+            <span class="read">Read on blog →</span>
+          </a>
+
+          <a class="card blog-card reveal" href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">
+            <div>
+              <h3>LLM Coding Agents</h3>
+              <p>How AI coding agents are changing software work.</p>
+            </div>
+            <span class="read">Read on blog →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-wrap">
+        <div class="card reveal">
+          <div class="eyebrow">Contact</div>
+          <h2>Let’s build resilient industrial platforms.</h2>
+          <p style="margin-top:14px;">
+            Open to architecture discussions, Industry 4.0 collaboration, enterprise architecture topics,
+            technical mentoring, and digital transformation conversations.
+          </p>
+
+          <div class="contact-list">
+            <a href="mailto:popatswapnil@gmail.com">✉️ popatswapnil@gmail.com</a>
+            <a href="https://swapnilpopat.in/" target="_blank" rel="noopener">🌐 swapnilpopat.in</a>
+            <a href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">📝 blog.swapnilpopat.in</a>
+            <a href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">💼 linkedin.com/in/swapnilpopat</a>
+            <a href="https://www.udemy.com/user/swapnil-popat/" target="_blank" rel="noopener">🎓 Udemy Instructor Profile</a>
+          </div>
+        </div>
+
+        <div class="card availability reveal">
+          <div class="eyebrow">Current Focus</div>
+          <h2>Architecture governance + hands-on delivery</h2>
+          <p style="margin-top:14px;">
+            Currently focused on ThingWorx platform architecture, PLM digitalization, enterprise architecture views,
+            DevOps improvement, smart factory integrations, and growing a high-performing technical team.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Industry 4.0</span>
+            <span class="tag">ThingWorx</span>
+            <span class="tag">EA Governance</span>
+            <span class="tag">Digital Twin</span>
+            <span class="tag">PLM</span>
+            <span class="tag">ISA-95</span>
+            <span class="tag">Team Leadership</span>
+          </div>
+
+          <div style="margin-top:24px;">
+            <a class="btn btn-primary" href="mailto:popatswapnil@gmail.com">Start a Conversation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Swapnil Popat. Built for GitHub Pages.</p>
+      <p>Industry 4.0 · IIoT · Enterprise Architecture · Smart Factory</p>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      root.setAttribute("data-theme", savedTheme);
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      if (next === "dark") {
+        root.removeAttribute("data-theme");
+        localStorage.setItem("theme", "dark");
+      } else {
+        root.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      }
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
+
+    reveals.forEach(el => observer.observe(el));
+
+    const scrollProgress = document.getElementById("scrollProgress");
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgress.style.width = progress + "%";
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Swapnil Popat",
+    "jobTitle": "IT Solutions Architect & Team Lead",
+    "url": "https://swapnilpopat.github.io",
+    "sameAs": [
+      "https://swapnilpopat.in/",
+      "https://blog.swapnilpopat.in/",
+      "https://www.linkedin.com/in/swapnilpopat/",
+      "https://www.udemy.com/user/swapnil-popat/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressCountry": "India"
+    },
+    "knowsAbout": [
+      "Industry 4.0",
+      "Industrial IoT",
+      "ThingWorx",
+      "Enterprise Architecture",
+      "SAP LeanIX",
+      "ISA-95",
+      "Digital Twin",
+      "Smart Factory",
+      "DevOps",
+      "Cloud Architecture"
+    ]
+  }
+  </script>
+</body>
+</html>
