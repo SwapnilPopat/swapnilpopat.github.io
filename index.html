@@ -26,7 +26,9 @@
   <meta property="og:url" content="https://swapnilpopat.github.io/" />
 
   <!-- Favicon - optional -->
-  <!-- <link rel="icon" href="assets/images/favicon.png" type="image/png" /> -->
+	<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+	<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+	<meta name="theme-color" content="#0f172a">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,87 +55,61 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
   <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="/" class="logo" aria-label="Swapnil Popat Home">
-        <span class="logo-mark">SP</span>
-        <span class="logo-text">Swapnil Popat</span>
-      </a>
+	<header class="site-header">
+	  <div class="container nav-wrap">
+		<a class="brand" href="/" aria-label="Swapnil Popat homepage">
+		  Swapnil Popat
+		</a>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#writing">Writing</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a class="nav-cta" href="mailto:popatswapnil@gmail.com">Contact</a>
-    </div>
-  </header>
-
-  <main>
+		<nav class="nav" aria-label="Primary navigation">
+		  <a href="/">Home</a>
+		  <a href="/projects/">Projects</a>
+		  <a href="/writing/">Writing</a>
+		  <a href="/architecture-notes/">Architecture Notes</a>
+		  <a href="/resume/">Resume</a>
+		  <a href="mailto:popatswapnil@gmail.com">Contact</a>
+		</nav>
+	  </div>
+	</header>
+  <main id="main">
     <!-- Hero -->
     <section class="hero section" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Industry 4.0 · IIoT · Enterprise Architecture · Team Leadership</p>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Industry 4.0 · IIoT · Enterprise Architecture</p>
 
-          <h1>
-            IT Solutions Architect building scalable
-            <span>Smart Factory & IIoT platforms</span>
-          </h1>
+      <h1>Swapnil Popat</h1>
 
-          <p class="hero-subtitle">
-            I am Swapnil Popat, an IT Solutions Architect and Team Lead with 12+ years of experience
-            designing and delivering Industry 4.0, ThingWorx, Smart Factory, PLM digitalization,
-            digital twin, and enterprise architecture solutions.
-          </p>
+      <p class="hero-subtitle">
+        IT Solutions Architect & Team Lead designing smart factory, IIoT, ThingWorx, 
+        and enterprise architecture solutions for global manufacturing environments.
+      </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-secondary" href="resume/">View Resume</a>
-            <a class="btn btn-ghost" href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">
-              LinkedIn
-            </a>
-          </div>
-
-          <div class="hero-meta">
-            <div>
-              <strong>12+</strong>
-              <span>Years Experience</span>
-            </div>
-            <div>
-              <strong>7</strong>
-              <span>Team Members Led</span>
-            </div>
-            <div>
-              <strong>Industry 4.0</strong>
-              <span>Architecture Focus</span>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero-card">
-          <div class="card-topline"></div>
-          <h2>Current Focus</h2>
-          <p>
-            Leading architecture, delivery, governance, and team development for ThingWorx and
-            Industrial IoT solutions in global manufacturing environments.
-          </p>
-
-          <ul class="check-list">
-            <li>ThingWorx platform architecture</li>
-            <li>ISA-95 aligned integration landscapes</li>
-            <li>MES · ERP · PLM orchestration</li>
-            <li>Enterprise Architecture governance</li>
-            <li>CI/CD, observability, and DevOps enablement</li>
-          </ul>
-        </aside>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn secondary" href="resume/">View Resume</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-    </section>
+    </div>
+
+    <aside class="hero-card" aria-label="Professional highlights">
+      <div class="metric">
+        <strong>12+</strong>
+        <span>Years Experience</span>
+      </div>
+      <div class="metric">
+        <strong>7</strong>
+        <span>Team Members Led</span>
+      </div>
+      <div class="metric">
+        <strong>Industry 4.0</strong>
+        <span>Smart Factory Architecture</span>
+      </div>
+    </aside>
+  </div>
+</section>
 
     <!-- About -->
     <section class="section" id="about">
@@ -464,5 +440,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
