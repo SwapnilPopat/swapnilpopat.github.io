@@ -24,18 +24,27 @@
 
 <body>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="/">Swapnil Popat</a>
+    <div class="container nav-container">
+      <a class="logo" href="/" aria-label="Swapnil Popat homepage">
+        <div class="logo-mark">SP</div>
+        <span class="logo-text">Swapnil Popat</span>
+      </a>
 
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/projects/">Projects</a>
-        <a href="/writing/">Writing</a>
-        <a href="/architecture-notes/">Architecture Notes</a>
-        <a href="/resume/">Resume</a>
-        <a href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </nav>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/projects/" class="nav-link">Projects</a>
+        <a href="/writing/" class="nav-link active">Writing</a>
+        <a href="/architecture-notes/" class="nav-link">Architecture Notes</a>
+        <a href="/resume/" class="nav-link">Resume</a>
+        <a href="mailto:popatswapnil@gmail.com" class="nav-cta">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main class="page-shell">
@@ -55,7 +64,7 @@
         <p>
           Visit the main blog for detailed posts on IoT, AI, digital transformation, and technology.
         </p>
-        <a href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener">Open blog.swapnilpopat.in</a>
+        <a href="https://blog.swapnilpopat.in/" target="_blank" rel="noopener" class="text-link">Open blog.swapnilpopat.in</a>
       </article>
 
       <article class="card">
@@ -92,6 +101,20 @@
     </section>
   </main>
 
-  <script src="/assets/js/analytics-events.js"></script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© <span id="year"></span> Swapnil Popat. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/resume/">Resume</a>
+        <a href="/projects/">Projects</a>
+        <a href="/writing/">Writing</a>
+        <a href="/architecture-notes/">Architecture Notes</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
 </body>
 </html>

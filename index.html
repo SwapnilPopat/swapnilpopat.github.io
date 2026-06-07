@@ -57,59 +57,69 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
   <!-- Header -->
-	<header class="site-header">
-	  <div class="container nav-wrap">
-		<a class="brand" href="/" aria-label="Swapnil Popat homepage">
-		  Swapnil Popat
-		</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="logo" href="/" aria-label="Swapnil Popat homepage">
+        <div class="logo-mark">SP</div>
+        <span class="logo-text">Swapnil Popat</span>
+      </a>
 
-		<nav class="nav" aria-label="Primary navigation">
-		  <a href="/">Home</a>
-		  <a href="/projects/">Projects</a>
-		  <a href="/writing/">Writing</a>
-		  <a href="/architecture-notes/">Architecture Notes</a>
-		  <a href="/resume/">Resume</a>
-		  <a href="mailto:popatswapnil@gmail.com">Contact</a>
-		</nav>
-	  </div>
-	</header>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/" class="nav-link active">Home</a>
+        <a href="/projects/" class="nav-link">Projects</a>
+        <a href="/writing/" class="nav-link">Writing</a>
+        <a href="/architecture-notes/" class="nav-link">Architecture Notes</a>
+        <a href="/resume/" class="nav-link">Resume</a>
+        <a href="mailto:popatswapnil@gmail.com" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
   <main id="main">
     <!-- Hero -->
     <section class="hero section" id="home">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <p class="eyebrow">Industry 4.0 · IIoT · Enterprise Architecture</p>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Industry 4.0 · IIoT · Enterprise Architecture</p>
+          <h1>Swapnil Popat</h1>
+          <p class="hero-subtitle">
+            IT Solutions Architect & Team Lead designing smart factory, IIoT, ThingWorx, 
+            and enterprise architecture solutions for global manufacturing environments.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="/resume/">View Resume</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
 
-      <h1>Swapnil Popat</h1>
-
-      <p class="hero-subtitle">
-        IT Solutions Architect & Team Lead designing smart factory, IIoT, ThingWorx, 
-        and enterprise architecture solutions for global manufacturing environments.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn secondary" href="resume/">View Resume</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/swapnilpopat/" target="_blank" rel="noopener">LinkedIn</a>
+        <aside class="hero-card" aria-label="Professional highlights">
+          <div class="card-topline"></div>
+          <div class="profile-container">
+            <img src="/assets/img/profile.webp" alt="Swapnil Popat" class="profile-image" />
+          </div>
+          <div class="metrics-container">
+            <div class="metric">
+              <strong>12+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="metric">
+              <strong>7</strong>
+              <span>Team Members Led</span>
+            </div>
+            <div class="metric">
+              <strong>Industry 4.0</strong>
+              <span>Smart Factory Architecture</span>
+            </div>
+          </div>
+        </aside>
       </div>
-    </div>
-
-    <aside class="hero-card" aria-label="Professional highlights">
-      <div class="metric">
-        <strong>12+</strong>
-        <span>Years Experience</span>
-      </div>
-      <div class="metric">
-        <strong>7</strong>
-        <span>Team Members Led</span>
-      </div>
-      <div class="metric">
-        <strong>Industry 4.0</strong>
-        <span>Smart Factory Architecture</span>
-      </div>
-    </aside>
-  </div>
-</section>
+    </section>
 
     <!-- About -->
     <section class="section" id="about">
@@ -437,9 +447,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
