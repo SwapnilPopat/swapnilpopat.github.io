@@ -30,27 +30,68 @@
 	<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 	<meta name="theme-color" content="#0f172a">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Optimized Async Load) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
   />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Google Analytics -->
-  <!-- Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF80VFT89Z"></script>
+  <!-- Theme Toggle Detection Script -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-MF80VFT89Z");
+    (function() {
+      const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.min.css" />
+
+  <!-- Google Analytics (Lazy Loaded on User Interaction) -->
+  <script>
+    (function() {
+      // Initialize stub gtag function to queue early events
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-MF80VFT89Z', { anonymize_ip: true });
+
+      let gaLoaded = false;
+      function loadGA() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+
+        // Remove interaction listeners
+        window.removeEventListener('scroll', loadGA);
+        window.removeEventListener('mousemove', loadGA);
+        window.removeEventListener('touchstart', loadGA);
+        window.removeEventListener('keydown', loadGA);
+
+        // Inject Google Analytics script
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MF80VFT89Z';
+        document.head.appendChild(script);
+      }
+
+      // Add interaction listeners
+      window.addEventListener('scroll', loadGA, { passive: true });
+      window.addEventListener('mousemove', loadGA, { passive: true });
+      window.addEventListener('touchstart', loadGA, { passive: true });
+      window.addEventListener('keydown', loadGA, { passive: true });
+
+      // Fallback load after 4 seconds
+      setTimeout(loadGA, 4000);
+    })();
   </script>
 </head>
 
@@ -64,11 +105,14 @@
         <span class="logo-text">Swapnil Popat</span>
       </a>
 
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"></button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
 
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/" class="nav-link active">Home</a>
@@ -101,7 +145,7 @@
         <aside class="hero-card" aria-label="Professional highlights">
           <div class="card-topline"></div>
           <div class="profile-container">
-            <img src="/assets/img/profile.webp" alt="Swapnil Popat" class="profile-image" />
+            <img src="/assets/img/profile.webp" alt="Swapnil Popat" class="profile-image" width="140" height="140" loading="eager" fetchpriority="high" />
           </div>
           <div class="metrics-container">
             <div class="metric">

@@ -2,6 +2,7 @@
   --bg: #090e17;
   --bg-soft: #0f172a;
   --bg-card: rgba(15, 23, 42, 0.45);
+  --bg-card-hover: rgba(30, 41, 59, 0.35);
   --bg-card-strong: rgba(30, 41, 59, 0.7);
   --text: #f8fafc;
   --muted: #94a3b8;
@@ -17,6 +18,31 @@
   --radius-md: 16px;
   --radius-sm: 10px;
   --container: 1140px;
+  --grid-line: rgba(255, 255, 255, 0.015);
+  --header-bg: rgba(9, 14, 23, 0.75);
+  --mobile-nav-bg: rgba(9, 14, 23, 0.98);
+  --footer-bg: rgba(9, 14, 23, 0.9);
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-soft: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card-hover: rgba(15, 23, 42, 0.04);
+  --bg-card-strong: rgba(241, 245, 249, 0.9);
+  --text: #0f172a;
+  --muted: #475569;
+  --line: rgba(15, 23, 42, 0.08);
+  
+  --primary: #0891b2;
+  --primary-strong: #0e7490;
+  --accent: #059669;
+  
+  --shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+  --grid-line: rgba(15, 23, 42, 0.015);
+  --header-bg: rgba(248, 250, 252, 0.85);
+  --mobile-nav-bg: rgba(248, 250, 252, 0.98);
+  --footer-bg: rgba(241, 245, 249, 0.9);
 }
 
 * {
@@ -35,14 +61,15 @@ body {
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 40rem),
     radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 40rem),
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   position: relative;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 a {
@@ -141,11 +168,11 @@ p:last-child {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(9, 14, 23, 0.75);
+  background: var(--header-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-container {
@@ -162,7 +189,7 @@ p:last-child {
   font-weight: 800;
   font-size: 1.15rem;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .logo-mark {
@@ -234,6 +261,46 @@ p:last-child {
   transform: translateY(-1px);
 }
 
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--primary);
+  border-color: rgba(6, 182, 212, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Nav Actions Container */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 /* Mobile Nav Toggle */
 .mobile-nav-toggle {
   display: none;
@@ -291,12 +358,20 @@ p:last-child {
 .btn-secondary {
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--line);
-  color: #ffffff;
+  color: var(--text);
 }
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .btn-secondary {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: rgba(15, 23, 42, 0.08);
 }
 
 .btn-ghost {
@@ -490,7 +565,7 @@ p:last-child {
   transform: translateY(-6px);
   border-color: rgba(6, 182, 212, 0.3);
   box-shadow: 0 15px 35px rgba(6, 182, 212, 0.08);
-  background: rgba(30, 41, 59, 0.35);
+  background: var(--bg-card-hover);
 }
 
 /* Info Cards (Expertise) */
@@ -535,14 +610,14 @@ p:last-child {
   grid-template-columns: 240px 1fr;
   gap: 40px;
   padding: 32px;
-  background: rgba(15, 23, 42, 0.3);
+  background: var(--bg-card);
 }
 
 .timeline-item:hover {
   border-color: rgba(6, 182, 212, 0.3);
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  background: rgba(30, 41, 59, 0.35);
+  background: var(--bg-card-hover);
 }
 
 .timeline-date {
@@ -727,9 +802,10 @@ p:last-child {
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 40px 0;
-  background: rgba(9, 14, 23, 0.9);
+  background: var(--footer-bg);
   color: var(--muted);
   font-size: 0.95rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .footer-container {
@@ -744,7 +820,7 @@ p:last-child {
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: var(--text);
 }
 
 /* Page Shell (Subpages) */
@@ -902,7 +978,7 @@ button:focus-visible {
     left: -100%;
     width: 100%;
     height: calc(100vh - 80px);
-    background: rgba(9, 14, 23, 0.98);
+    background: var(--mobile-nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;

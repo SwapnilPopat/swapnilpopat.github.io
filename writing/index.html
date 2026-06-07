@@ -7,19 +7,63 @@
   <title>Writing | Swapnil Popat</title>
   <meta name="description" content="Articles and notes by Swapnil Popat on IIoT, Industry 4.0, architecture, ThingWorx, AI, and digital transformation." />
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF80VFT89Z"></script>
+  <!-- Google Analytics (Lazy Loaded on User Interaction) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function() {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-MF80VFT89Z', { anonymize_ip: true });
 
-    gtag('config', 'G-MF80VFT89Z', {
-      anonymize_ip: true
-    });
+      let gaLoaded = false;
+      function loadGA() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+
+        window.removeEventListener('scroll', loadGA);
+        window.removeEventListener('mousemove', loadGA);
+        window.removeEventListener('touchstart', loadGA);
+        window.removeEventListener('keydown', loadGA);
+
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MF80VFT89Z';
+        document.head.appendChild(script);
+      }
+
+      window.addEventListener('scroll', loadGA, { passive: true });
+      window.addEventListener('mousemove', loadGA, { passive: true });
+      window.addEventListener('touchstart', loadGA, { passive: true });
+      window.addEventListener('keydown', loadGA, { passive: true });
+
+      setTimeout(loadGA, 4000);
+    })();
   </script>
 
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- Google Fonts (Optimized Async Load) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
+
+  <link rel="stylesheet" href="/assets/css/style.min.css" />
+  <!-- Theme Toggle Detection Script -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 
 <body>
@@ -30,11 +74,14 @@
         <span class="logo-text">Swapnil Popat</span>
       </a>
 
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"></button>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
 
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="/" class="nav-link">Home</a>
