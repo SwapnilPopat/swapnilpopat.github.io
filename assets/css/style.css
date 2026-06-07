@@ -622,3 +622,29 @@ p {
     letter-spacing: -0.055em;
   }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 1.25rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .grid,
+  .project-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
