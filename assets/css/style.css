@@ -22,6 +22,7 @@
   --header-bg: rgba(9, 14, 23, 0.75);
   --mobile-nav-bg: rgba(9, 14, 23, 0.98);
   --footer-bg: rgba(9, 14, 23, 0.9);
+  --heading-color: #ffffff;
 }
 
 [data-theme="light"] {
@@ -43,6 +44,7 @@
   --header-bg: rgba(248, 250, 252, 0.85);
   --mobile-nav-bg: rgba(248, 250, 252, 0.98);
   --footer-bg: rgba(241, 245, 249, 0.9);
+  --heading-color: #0f172a;
 }
 
 * {
@@ -114,7 +116,7 @@ img {
 h1, h2, h3, h4 {
   font-weight: 800;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--heading-color);
 }
 
 h1 {
@@ -225,7 +227,7 @@ p:last-child {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ffffff;
+  color: var(--heading-color);
 }
 
 .nav-link::after {
@@ -381,7 +383,7 @@ p:last-child {
 
 .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  color: var(--heading-color);
 }
 
 /* Hero Section */
@@ -531,7 +533,7 @@ p:last-child {
 }
 
 .text-link:hover {
-  color: #ffffff;
+  color: var(--primary-strong);
   transform: translateX(4px);
 }
 
@@ -714,7 +716,7 @@ p:last-child {
 .pill-list span:hover {
   background: rgba(6, 182, 212, 0.1);
   border-color: rgba(6, 182, 212, 0.3);
-  color: #ffffff;
+  color: var(--heading-color);
 }
 
 .pill-list {
@@ -771,7 +773,7 @@ p:last-child {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.02);
-  color: #ffffff;
+  color: var(--text);
   font-weight: 600;
   font-size: 1rem;
   display: flex;
