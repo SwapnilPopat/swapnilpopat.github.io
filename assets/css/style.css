@@ -923,6 +923,10 @@ p:last-child {
 .contact-btn-icon {
   width: 44px;
   height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 44px;
+  max-height: 44px;
   border-radius: var(--md-sys-shape-corner-medium);
   display: flex;
   align-items: center;
@@ -931,16 +935,23 @@ p:last-child {
   border: 1px solid var(--md-outline-variant);
   color: var(--primary);
   flex-shrink: 0;
+  overflow: hidden;
   transition: transform 0.35s var(--md-sys-motion-easing-spring),
               background 0.3s ease,
               color 0.3s ease,
               border-color 0.3s ease;
 }
 
-.contact-btn-icon svg {
-  width: 22px;
-  height: 22px;
-  display: block;
+.contact-btn-icon svg,
+svg.contact-svg {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+  max-width: 22px !important;
+  max-height: 22px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
 }
 
 .contact-btn:hover .contact-btn-icon {
@@ -1030,6 +1041,10 @@ p:last-child {
 .contact-btn-arrow {
   width: 28px;
   height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-width: 28px;
+  max-height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1037,15 +1052,23 @@ p:last-child {
   color: var(--muted);
   opacity: 0.5;
   flex-shrink: 0;
+  overflow: hidden;
   transition: transform 0.3s var(--md-sys-motion-easing-spring),
               color 0.2s ease,
               opacity 0.2s ease,
               background 0.2s ease;
 }
 
-.contact-btn-arrow svg {
-  width: 16px;
-  height: 16px;
+.contact-btn-arrow svg,
+svg.arrow-svg {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
 }
 
 .contact-btn:hover .contact-btn-arrow {
