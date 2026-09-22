@@ -1149,6 +1149,8 @@ svg.arrow-svg {
 
 /* Page Shell (Subpages) */
 .page-shell {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
   padding: 80px 0 100px;
 }
 
