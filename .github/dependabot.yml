@@ -1,0 +1,39 @@
+version: 2
+updates:
+  # Maintain GitHub Actions workflow dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "Etc/UTC"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci(actions)"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    groups:
+      actions:
+        patterns:
+          - "*"
+
+  # Maintain npm dependencies (uncomment if package.json is added to the project)
+  # - package-ecosystem: "npm"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #     day: "monday"
+  #     time: "04:00"
+  #     timezone: "Etc/UTC"
+  #   open-pull-requests-limit: 10
+  #   commit-message:
+  #     prefix: "chore(deps)"
+  #   labels:
+  #     - "dependencies"
+  #     - "npm"
+  #   groups:
+  #     dependencies:
+  #       patterns:
+  #         - "*"
