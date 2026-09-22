@@ -27,6 +27,7 @@ jobs:
           test -f robots.txt
           test -f sitemap.xml
           test -f LICENSE
+          test -f manifest.json
 
           echo "Verifying stylesheets and scripts..."
           test -f assets/css/style.css

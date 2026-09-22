@@ -77,20 +77,23 @@ swapnilpopat.github.io/
 │   │   ├── style.css            # Master stylesheet
 │   │   └── style.min.css        # Production minified stylesheet
 │   ├── img/
+│   │   ├── apple-touch-icon.png # iOS/Android touch bookmark icon
 │   │   ├── favicon.svg          # SVG vector site icon
-│   │   ├── og-image.png         # Social sharing preview banner
+│   │   ├── og-image.png         # Social sharing preview banner (1200x630)
 │   │   └── profile.webp         # Compressed profile portrait
 │   └── js/
 │       ├── analytics-events.js  # GA4 custom event tracking
-│       └── main.js              # Theme toggle, mobile menu, and dynamic footer year
+│       └── main.js              # Theme toggle, mobile menu, filters, and dynamic footer year
 ├── projects/
-│   └── index.html               # Projects showcase page
+│   └── index.html               # Projects showcase page with MD3 filter chips
 ├── resume/
-│   └── index.html               # Digital resume / CV page
+│   └── index.html               # Digital resume / CV page with print styles
 ├── writing/
 │   └── index.html               # Articles and external blog directory
 ├── 404.html                     # Custom 404 error page
 ├── index.html                   # Main landing page
+├── LICENSE                      # MIT Open Source License
+├── manifest.json                # PWA web app manifest
 ├── robots.txt                   # Search crawler directives
 ├── sitemap.xml                  # Canonical XML sitemap
 └── README.md                    # Repository documentation

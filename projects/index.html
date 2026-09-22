@@ -26,9 +26,10 @@
 
 <link rel="canonical" href="https://swapnilpopat.github.io/projects/">
 
-<!-- Favicon -->
+<!-- Favicon & PWA -->
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0f172a">
 
   <!-- Google Analytics (Lazy Loaded on User Interaction) -->
@@ -124,7 +125,7 @@
     />
   </noscript>
 
-  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.3" />
+  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.4" />
 </head>
 
 <body>
@@ -163,8 +164,15 @@
       </p>
     </section>
 
+    <div class="md-filter-bar" role="toolbar" aria-label="Filter projects by domain">
+      <button class="md-chip active" data-filter="all">All Projects <span class="md-chip-count">8</span></button>
+      <button class="md-chip" data-filter="iiot">Industry 4.0 &amp; IIoT <span class="md-chip-count">4</span></button>
+      <button class="md-chip" data-filter="architecture">Enterprise &amp; PLM <span class="md-chip-count">2</span></button>
+      <button class="md-chip" data-filter="fullstack">Full-Stack &amp; Cloud <span class="md-chip-count">3</span></button>
+    </div>
+
     <section class="grid cards-grid">
-      <article class="card">
+      <article class="card reveal" data-category="iiot architecture">
         <span class="tag">Industry 4.0</span>
         <h2>AI-Driven Closed-Loop Quality Platform</h2>
         <p>
@@ -179,7 +187,7 @@
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card reveal" data-category="iiot">
         <span class="tag">Manufacturing Platform</span>
         <h2>WorkCentre Performance Monitoring</h2>
         <p>
@@ -192,7 +200,7 @@
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card reveal" data-category="architecture">
         <span class="tag">Engineering Workflow</span>
         <h2>PLM Apps Suite for Engineering Teams</h2>
         <p>
@@ -205,7 +213,7 @@
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card reveal" data-category="iiot">
         <span class="tag">Production Visibility</span>
         <h2>Production Visibility – SmartFactory UK</h2>
         <p>
@@ -218,20 +226,20 @@
         </ul>
       </article>
 
-      <article class="card">
-        <span class="tag">OEE & Asset Monitoring</span>
-        <h2>OEE & FSU Solutions</h2>
+      <article class="card reveal" data-category="iiot">
+        <span class="tag">OEE &amp; Asset Monitoring</span>
+        <h2>OEE &amp; FSU Solutions</h2>
         <p>
           Implemented RTPPM (Real-Time Production Performance Monitoring), AMU (Asset Monitoring), and CWC (Connected Work Cell) solutions with Vuforia AR integration.
         </p>
         <ul>
-          <li>RTPPM & AMU</li>
+          <li>RTPPM &amp; AMU</li>
           <li>ThingWorx</li>
           <li>PTC Vuforia AR</li>
         </ul>
       </article>
 
-      <article class="card">
+      <article class="card reveal" data-category="fullstack">
         <span class="tag">Full Stack</span>
         <h2>ReferralNet</h2>
         <p>
@@ -240,7 +248,7 @@
         <a href="https://referralnet.online/" target="_blank" rel="noopener" class="text-link">Visit Project</a>
       </article>
 
-      <article class="card">
+      <article class="card reveal" data-category="fullstack">
         <span class="tag">E-commerce</span>
         <h2>DealDash India</h2>
         <p>
@@ -250,7 +258,7 @@
         <a href="https://dealdashindia.store/" target="_blank" rel="noopener" class="text-link">Visit Project</a>
       </article>
 
-      <article class="card">
+      <article class="card reveal" data-category="fullstack">
         <span class="tag">React</span>
         <h2>Relationship Manager</h2>
         <p>

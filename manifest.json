@@ -1,0 +1,21 @@
+{
+  "name": "Swapnil Popat - IT Solutions Architect",
+  "short_name": "Swapnil Popat",
+  "description": "Portfolio of Swapnil Popat — IT Solutions Architect, Team Lead, and Industry 4.0 / IIoT specialist.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090e17",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

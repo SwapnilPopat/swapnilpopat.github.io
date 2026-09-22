@@ -1423,6 +1423,384 @@ section {
   contain-intrinsic-size: 600px;
 }
 
+/* ==========================================================================
+   Material Design 3 Expressive Components & Utilities
+   ========================================================================== */
+
+/* MD3 Filter Chips */
+.md-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+  align-items: center;
+}
+
+.md-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--md-sys-shape-corner-full, 999px);
+  font-size: 0.88rem;
+  font-weight: 600;
+  background: var(--bg-card);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 0.25s var(--md-sys-motion-easing-spring, cubic-bezier(0.34, 1.56, 0.64, 1));
+  user-select: none;
+}
+
+.md-chip:hover {
+  background: var(--bg-card-hover);
+  color: var(--text);
+  border-color: rgba(6, 182, 212, 0.35);
+  transform: translateY(-2px);
+}
+
+.md-chip.active {
+  background: var(--primary-container, rgba(6, 182, 212, 0.15));
+  color: var(--on-primary-container, #06b6d4);
+  border-color: var(--primary);
+  box-shadow: 0 0 16px var(--primary-glow);
+}
+
+.md-chip-count {
+  font-size: 0.75rem;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}
+
+[data-theme="light"] .md-chip-count {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Card Filtering Animation */
+.card.is-hidden {
+  display: none !important;
+}
+
+/* Floating Action Button (FAB) */
+.md-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--md-sys-shape-corner-large, 16px);
+  background: var(--bg-card-strong);
+  color: var(--primary);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: all 0.3s var(--md-sys-motion-easing-spring);
+  z-index: 90;
+}
+
+.md-fab.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.md-fab:hover {
+  background: var(--primary);
+  color: #030712;
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 14px 32px rgba(6, 182, 212, 0.35);
+}
+
+.md-fab:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
+/* Copy Email Micro-Interaction */
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+[data-theme="light"] .copy-email-btn {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.copy-email-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--primary-container);
+  transform: scale(1.1);
+}
+
+.copy-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--bg-soft);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s var(--md-sys-motion-easing-spring);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.copy-tooltip.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Featured Writing Grid on Homepage */
+.featured-writing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.article-preview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  transition: all 0.3s var(--md-sys-motion-easing-spring);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.article-preview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.article-preview-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: var(--shadow);
+  background: var(--bg-card-hover);
+}
+
+.article-preview-card:hover::before {
+  opacity: 1;
+}
+
+.article-preview-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin: 10px 0;
+  color: var(--heading-color);
+}
+
+.article-preview-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Architecture Notes Accordion */
+.md-accordion {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.md-accordion summary {
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.md-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-accordion summary:hover {
+  color: var(--heading-color);
+}
+
+.md-accordion .accordion-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s var(--md-sys-motion-easing-spring);
+}
+
+.md-accordion[open] .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.md-accordion-content {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--md-surface-2);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text);
+  border-left: 3px solid var(--primary);
+}
+
+.md-accordion-content p {
+  margin-bottom: 8px;
+}
+
+.md-accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Certification Authority Groups */
+.cert-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.cert-group {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cert-group:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-2px);
+}
+
+.cert-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.cert-group-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+.cert-badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--md-surface-2);
+  border: 1px solid var(--line);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cert-item:hover {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* Scroll-Reveal Micro-Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--md-sys-motion-easing-expressive), transform 0.5s var(--md-sys-motion-easing-spring);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* Print Styles for Clean Resume / Document Printing */
 @media print {
   *, *::before, *::after {

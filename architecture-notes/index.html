@@ -21,9 +21,10 @@
   <meta name="twitter:description" content="Architecture notes by Swapnil Popat on IIoT, digital twins, smart factory platforms, ThingWorx, enterprise architecture, ISA-95, DevOps, and industrial integrations." />
   <meta name="twitter:image" content="https://swapnilpopat.github.io/assets/img/og-image.png" />
 
-  <!-- Favicon -->
+  <!-- Favicon & PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0f172a">
 
   <!-- Google Analytics (Lazy Loaded on User Interaction) -->
@@ -75,7 +76,7 @@
     />
   </noscript>
 
-  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.3" />
+  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.4" />
 
   <!-- Theme Toggle Detection Script -->
   <script>
@@ -124,58 +125,124 @@
     </section>
 
     <section class="cards-grid">
-      <article class="card">
+      <article class="card reveal">
         <span class="tag">Principle</span>
         <h2>Design for Loose Coupling</h2>
         <p>
           Avoid hidden dependencies between platform services, UI layers, integration logic,
           and external systems. Keep boundaries visible and intentional.
         </p>
+        <details class="md-accordion">
+          <summary>
+            <span>Key Trade-offs &amp; Guardrails</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="md-accordion-content">
+            <p><strong>Primary Driver:</strong> Prevent changes in shop-floor edge devices from breaking analytics or MES consumers.</p>
+            <p><strong>Pattern:</strong> Asynchronous message queues (RabbitMQ/MQTT) with strict canonical data models.</p>
+            <p><strong>Guardrail:</strong> Avoid synchronous REST calls on industrial telemetry ingest paths.</p>
+          </div>
+        </details>
       </article>
 
-      <article class="card">
+      <article class="card reveal">
         <span class="tag">Pattern</span>
         <h2>Digital Twin Modeling</h2>
         <p>
           Model assets, machines, lines, plants, and products using reusable templates
           and clear inheritance rules. Keep behavior and data ownership explicit.
         </p>
+        <details class="md-accordion">
+          <summary>
+            <span>Key Trade-offs &amp; Guardrails</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="md-accordion-content">
+            <p><strong>Primary Driver:</strong> Standardization of plant equipment across global manufacturing lines.</p>
+            <p><strong>Pattern:</strong> ThingWorx ThingTemplates &amp; ThingShapes with clean property inheritance.</p>
+            <p><strong>Guardrail:</strong> Keep business logic decoupled from physical hardware addressing.</p>
+          </div>
+        </details>
       </article>
 
-      <article class="card">
+      <article class="card reveal">
         <span class="tag">Integration</span>
         <h2>MES ↔ ERP ↔ PLM Integration</h2>
         <p>
           Treat integration as a product capability, not as one-time plumbing.
           Define ownership, event contracts, error handling, and observability from day one.
         </p>
+        <details class="md-accordion">
+          <summary>
+            <span>Key Trade-offs &amp; Guardrails</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="md-accordion-content">
+            <p><strong>Primary Driver:</strong> End-to-end traceability from engineering design (PLM) to plant execution (MES) and financials (ERP).</p>
+            <p><strong>Pattern:</strong> Event-driven architecture with SAP API Management and dead-letter queue resilience.</p>
+            <p><strong>Guardrail:</strong> Enforce idempotency on every inbound production transaction.</p>
+          </div>
+        </details>
       </article>
 
-      <article class="card">
+      <article class="card reveal">
         <span class="tag">Standard</span>
         <h2>ISA-95 Thinking</h2>
         <p>
           Use ISA-95 to clarify responsibilities across enterprise, operations,
           control, and physical process layers.
         </p>
+        <details class="md-accordion">
+          <summary>
+            <span>Key Trade-offs &amp; Guardrails</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="md-accordion-content">
+            <p><strong>Primary Driver:</strong> Clarify boundaries between Level 0-2 (PLC/SCADA), Level 3 (MES/MOM), and Level 4 (ERP/Business).</p>
+            <p><strong>Pattern:</strong> Purdue Enterprise Reference Architecture mapping with Kepware industrial connectivity.</p>
+            <p><strong>Guardrail:</strong> Do not bypass Level 3 for control-plane decisions directly to the cloud.</p>
+          </div>
+        </details>
       </article>
 
-      <article class="card">
+      <article class="card reveal">
         <span class="tag">DevOps</span>
         <h2>Observable IIoT Platforms</h2>
         <p>
           Industrial platforms need structured logs, health checks, metrics, dashboards,
           alerting, and incident playbooks.
         </p>
+        <details class="md-accordion">
+          <summary>
+            <span>Key Trade-offs &amp; Guardrails</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="md-accordion-content">
+            <p><strong>Primary Driver:</strong> Rapid root-cause analysis across thousands of distributed edge connections.</p>
+            <p><strong>Pattern:</strong> Splunk, Prometheus, and Grafana unified telemetry with custom synthetic health probes.</p>
+            <p><strong>Guardrail:</strong> Establish telemetry drop alerts before edge buffers overflow.</p>
+          </div>
+        </details>
       </article>
 
-      <article class="card">
+      <article class="card reveal">
         <span class="tag">AI</span>
         <h2>AI in Manufacturing Architecture</h2>
         <p>
           AI should be introduced where data quality, feedback loops, business ownership,
           and measurable value are clearly defined.
         </p>
+        <details class="md-accordion">
+          <summary>
+            <span>Key Trade-offs &amp; Guardrails</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="md-accordion-content">
+            <p><strong>Primary Driver:</strong> Closed-loop predictive quality, anomaly detection, and automated root-cause guidance.</p>
+            <p><strong>Pattern:</strong> Edge-cloud hybrid inferencing: low-latency anomaly checks at edge, deep LLM/analytical reasoning in cloud.</p>
+            <p><strong>Guardrail:</strong> Human-in-the-loop validation for all physical parameter adjustments.</p>
+          </div>
+        </details>
       </article>
     </section>
   </main>

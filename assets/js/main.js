@@ -68,4 +68,97 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Project Category Filter
+  const filterChips = document.querySelectorAll(".md-chip[data-filter]");
+  const projectCards = document.querySelectorAll(".cards-grid .card[data-category]");
+
+  if (filterChips.length > 0 && projectCards.length > 0) {
+    filterChips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        filterChips.forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+
+        const targetFilter = chip.getAttribute("data-filter");
+        projectCards.forEach((card) => {
+          const categories = card.getAttribute("data-category") || "";
+          if (targetFilter === "all" || categories.includes(targetFilter)) {
+            card.classList.remove("is-hidden");
+          } else {
+            card.classList.add("is-hidden");
+          }
+        });
+      });
+    });
+  }
+
+  // 1-Click Copy Email Micro-Interaction
+  const copyButtons = document.querySelectorAll(".copy-email-btn");
+  copyButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const email = btn.getAttribute("data-email") || "popatswapnil@gmail.com";
+      const tooltip = btn.querySelector(".copy-tooltip");
+
+      navigator.clipboard.writeText(email).then(() => {
+        if (tooltip) {
+          tooltip.classList.add("show");
+          setTimeout(() => {
+            tooltip.classList.remove("show");
+          }, 2000);
+        }
+        if (typeof gtag === "function") {
+          gtag("event", "copy_email", {
+            event_category: "contact",
+            event_label: email
+          });
+        }
+      });
+    });
+  });
+
+  // Scroll-to-Top Floating Action Button (FAB)
+  let fab = document.getElementById("scroll-top-fab");
+  if (!fab) {
+    fab = document.createElement("button");
+    fab.id = "scroll-top-fab";
+    fab.className = "md-fab";
+    fab.setAttribute("aria-label", "Scroll back to top");
+    fab.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
+    document.body.appendChild(fab);
+
+    fab.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 350) {
+        fab.classList.add("visible");
+      } else {
+        fab.classList.remove("visible");
+      }
+    }, { passive: true });
+  }
+
+  // Scroll-Reveal Micro-Animations (IntersectionObserver)
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    const revealElements = document.querySelectorAll(".reveal");
+    revealElements.forEach((el) => revealObserver.observe(el));
+  } else {
+    // Fallback if IntersectionObserver is not supported
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("revealed"));
+  }
 });
