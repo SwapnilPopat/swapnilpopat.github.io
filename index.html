@@ -19,11 +19,61 @@
   <meta name="author" content="Swapnil Popat" />
   <meta name="robots" content="index, follow" />
 
+  <link rel="canonical" href="https://swapnilpopat.github.io/" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Swapnil Popat | IT Solutions Architect & Industry 4.0 Leader" />
   <meta property="og:description" content="Portfolio of Swapnil Popat — IT Solutions Architect, Team Lead, and Industry 4.0 / IIoT specialist." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://swapnilpopat.github.io/" />
+  <meta property="og:image" content="https://swapnilpopat.github.io/assets/img/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Swapnil Popat | IT Solutions Architect & Industry 4.0 Leader" />
+  <meta name="twitter:description" content="Portfolio of Swapnil Popat — IT Solutions Architect, Team Lead, and Industry 4.0 / IIoT specialist." />
+  <meta name="twitter:image" content="https://swapnilpopat.github.io/assets/img/og-image.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Swapnil Popat",
+    "jobTitle": "IT Solutions Architect & Team Lead",
+    "url": "https://swapnilpopat.github.io/",
+    "email": "mailto:popatswapnil@gmail.com",
+    "image": "https://swapnilpopat.github.io/assets/img/profile.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://swapnilpopat.in/",
+      "https://blog.swapnilpopat.in/",
+      "https://www.linkedin.com/in/swapnilpopat/",
+      "https://github.com/swapnilpopat",
+      "https://x.com/swapnilpopat",
+      "https://www.instagram.com/swapnilpopat/",
+      "https://www.facebook.com/swapnilPopat",
+      "https://www.credly.com/users/swapnilpopat/badges"
+    ],
+    "knowsAbout": [
+      "Industry 4.0",
+      "IIoT",
+      "ThingWorx",
+      "Smart Factory",
+      "Enterprise Architecture",
+      "Digital Twin",
+      "SAP LeanIX",
+      "ISA-95",
+      "OPC-UA",
+      "MQTT",
+      "Manufacturing Digital Transformation"
+    ]
+  }
+  </script>
 
   <!-- Favicon - optional -->
 	<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
@@ -54,7 +104,7 @@
     })();
   </script>
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.min.css?v=1.2" />
+  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.3" />
 
   <!-- Google Analytics (Lazy Loaded on User Interaction) -->
   <script>
@@ -115,7 +165,7 @@
       </div>
 
       <nav class="main-nav" aria-label="Primary navigation">
-        <a href="/" class="nav-link active">Home</a>
+        <a href="/" class="nav-link active" aria-current="page">Home</a>
         <a href="/projects/" class="nav-link">Projects</a>
         <a href="/writing/" class="nav-link">Writing</a>
         <a href="/architecture-notes/" class="nav-link">Architecture Notes</a>
@@ -652,13 +702,14 @@
     <div class="container footer-container">
       <p>© <span id="year"></span> Swapnil Popat. All rights reserved.</p>
       <div class="footer-links">
-        <a href="projects/">Projects</a>
-        <a href="writing/">Writing</a>
-        <a href="architecture-notes/">Architecture Notes</a>
+        <a href="/projects/">Projects</a>
+        <a href="/writing/">Writing</a>
+        <a href="/architecture-notes/">Architecture Notes</a>
       </div>
     </div>
   </footer>
 
   <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/analytics-events.js" defer></script>
 </body>
 </html>

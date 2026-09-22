@@ -15,8 +15,29 @@ jobs:
 
       - name: Verify site integrity
         run: |
+          echo "Verifying core HTML pages..."
           test -f index.html
           test -f 404.html
+          test -f projects/index.html
+          test -f writing/index.html
+          test -f architecture-notes/index.html
+          test -f resume/index.html
+
+          echo "Verifying site config and discovery files..."
+          test -f robots.txt
+          test -f sitemap.xml
+          test -f LICENSE
+
+          echo "Verifying stylesheets and scripts..."
           test -f assets/css/style.css
+          test -f assets/css/style.min.css
           test -f assets/js/main.js
-          echo "Site integrity check passed."
+          test -f assets/js/analytics-events.js
+
+          echo "Verifying brand assets..."
+          test -f assets/img/favicon.svg
+          test -f assets/img/apple-touch-icon.png
+          test -f assets/img/og-image.png
+          test -f assets/img/profile.webp
+
+          echo "All site integrity checks passed successfully."

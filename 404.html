@@ -4,7 +4,38 @@
   <meta charset="UTF-8">
   <title>Page Not Found | Swapnil Popat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.2">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Google Fonts (Optimized Async Load) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
+
+  <!-- Theme Toggle Detection Script -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.3">
 </head>
 <body>
   <main class="error-page">

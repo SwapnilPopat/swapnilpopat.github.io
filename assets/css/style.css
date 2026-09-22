@@ -108,6 +108,12 @@ a {
   transition: all 0.2s ease;
 }
 
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1415,4 +1421,86 @@ button:focus-visible {
 section {
   content-visibility: auto;
   contain-intrinsic-size: 600px;
+}
+
+/* Print Styles for Clean Resume / Document Printing */
+@media print {
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  .site-header,
+  .site-footer,
+  .nav-actions,
+  .hero-actions,
+  .skip-link,
+  .theme-toggle-btn,
+  .mobile-nav-toggle,
+  .contact-btn-arrow,
+  .contact-status-chip {
+    display: none !important;
+  }
+
+  .page-shell,
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .page-hero {
+    margin-bottom: 24px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 2px solid #111827 !important;
+  }
+
+  .page-hero h1 {
+    font-size: 22pt !important;
+    color: #000000 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .resume-section {
+    margin-bottom: 20px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-section h2 {
+    font-size: 13pt !important;
+    border-bottom: 1px solid #d1d5db !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 10px !important;
+    color: #111827 !important;
+  }
+
+  .timeline-item,
+  .card,
+  .info-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #e5e7eb !important;
+    background: #ffffff !important;
+    margin-bottom: 12px !important;
+    padding: 12px !important;
+  }
+
+  .skill-cloud span {
+    border: 1px solid #9ca3af !important;
+    color: #111827 !important;
+    background: transparent !important;
+    padding: 2px 8px !important;
+    font-size: 9pt !important;
+  }
 }
