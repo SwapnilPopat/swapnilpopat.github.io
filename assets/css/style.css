@@ -41,6 +41,12 @@
   --primary-glow: rgba(6, 182, 212, 0.35);
   --primary-container: rgba(6, 182, 212, 0.12);
   --on-primary-container: #67e8f9;
+
+  /* Standard Spacing Tokens */
+  --space-section: clamp(42px, 5.2vw, 62px);
+  --space-gap-lg: clamp(24px, 3.5vw, 36px);
+  --space-gap-md: 18px;
+  --space-gap-sm: 12px;
 }
 
 [data-theme="light"] {
@@ -125,7 +131,7 @@ img {
 }
 
 .section {
-  padding: 100px 0;
+  padding: var(--space-section) 0;
 }
 
 .section-alt {
@@ -215,7 +221,7 @@ p:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
+  min-height: 64px;
 }
 
 .logo {
@@ -248,7 +254,7 @@ p:last-child {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
 }
 
 .nav-link {
@@ -452,20 +458,20 @@ p:last-child {
 
 /* Hero Section */
 .hero {
-  padding: 120px 0 80px;
+  padding: clamp(42px, 5.2vw, 64px) 0 clamp(32px, 3.8vw, 46px);
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
-  gap: 60px;
+  gap: var(--space-gap-lg);
   align-items: center;
 }
 
 .hero-subtitle {
   font-size: clamp(1.02rem, 1.8vw, 1.15rem);
   color: var(--muted);
-  margin: 20px 0 32px;
+  margin: 12px 0 20px;
   max-width: 680px;
   line-height: 1.65;
 }
@@ -473,13 +479,13 @@ p:last-child {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 }
 
 /* Hero Card (Profile & Stats) */
 .hero-card {
   position: relative;
-  padding: 40px 30px;
+  padding: 24px 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--bg-card);
@@ -502,12 +508,12 @@ p:last-child {
 .profile-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .profile-image {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid transparent;
@@ -519,11 +525,11 @@ p:last-child {
 
 .metrics-container {
   display: grid;
-  gap: 20px;
+  gap: 10px;
 }
 
 .metric {
-  padding: 16px;
+  padding: 12px 14px;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--line);
@@ -552,7 +558,7 @@ p:last-child {
 .two-column {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: 60px;
+  gap: var(--space-gap-lg);
   align-items: start;
 }
 
@@ -562,26 +568,26 @@ p:last-child {
 }
 
 .content-block p {
-  margin-bottom: 1.25rem;
-  line-height: 1.75;
+  margin-bottom: 0.95rem;
+  line-height: 1.7;
 }
 
 /* Section Headings */
 .section-heading {
-  margin-bottom: 50px;
+  margin-bottom: 26px;
   max-width: 700px;
 }
 
 .section-heading h2 {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .section-heading-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 50px;
-  gap: 24px;
+  margin-bottom: 26px;
+  gap: 18px;
 }
 
 .section-heading-row .section-heading {
@@ -605,7 +611,7 @@ p:last-child {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 18px;
 }
 
 .card,
@@ -617,7 +623,7 @@ p:last-child {
   border: 1px solid var(--line);
   background: var(--bg-card);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 22px 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -636,15 +642,15 @@ p:last-child {
 
 /* Info Cards (Expertise) */
 .icon-box {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
-  border-radius: 14px;
+  border-radius: 12px;
   background: rgba(6, 182, 212, 0.08);
   border: 1px solid rgba(6, 182, 212, 0.2);
-  font-size: 1.5rem;
-  margin-bottom: 24px;
+  font-size: 1.35rem;
+  margin-bottom: 14px;
   transition: all 0.3s ease;
 }
 
@@ -668,14 +674,14 @@ p:last-child {
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 40px;
-  padding: 32px;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 20px 22px;
   background: var(--bg-card);
 }
 
@@ -701,7 +707,7 @@ p:last-child {
 .timeline-content .muted {
   font-weight: 600;
   color: var(--accent);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .timeline-content p {
@@ -714,14 +720,14 @@ p:last-child {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 18px;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 280px;
+  min-height: 220px;
 }
 
 .project-card.featured {
@@ -734,14 +740,14 @@ p:last-child {
 }
 
 .project-card h3 {
-  margin: 12px 0 14px;
+  margin: 10px 0 10px;
 }
 
 .project-card p:not(.tag) {
   color: var(--muted);
   font-size: 0.98rem;
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .tag {
@@ -794,7 +800,7 @@ p:last-child {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 40px;
+  gap: 24px;
 }
 
 .writing-card p {
@@ -804,14 +810,14 @@ p:last-child {
 
 /* Contact Section - Google Material Design Expressive */
 .contact-section {
-  padding-bottom: 100px;
+  padding-bottom: var(--space-section);
 }
 
 .contact-card {
-  padding: 48px;
+  padding: clamp(24px, 3.2vw, 36px);
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
-  gap: 48px;
+  gap: clamp(24px, 3.2vw, 36px);
   align-items: start;
   border-radius: var(--md-sys-shape-corner-extra-large);
   background: radial-gradient(circle at 10% 10%, rgba(6, 182, 212, 0.12) 0%, transparent 60%), var(--bg-card-strong);
@@ -824,7 +830,7 @@ p:last-child {
 .contact-intro {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .contact-card h2 {
@@ -872,15 +878,15 @@ p:last-child {
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 10px;
 }
 
 /* Material Design Expressive Contact Button */
 .contact-btn {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
+  gap: 12px;
+  padding: 12px 14px;
   border-radius: var(--md-sys-shape-corner-large);
   background: var(--md-surface-1);
   border: 1px solid var(--md-outline-variant);
@@ -1125,7 +1131,7 @@ svg.arrow-svg {
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 40px 0;
+  padding: 24px 0;
   background: var(--footer-bg);
   color: var(--muted);
   font-size: 0.95rem;
@@ -1151,11 +1157,11 @@ svg.arrow-svg {
 .page-shell {
   width: min(100% - 40px, var(--container));
   margin-inline: auto;
-  padding: 80px 0 100px;
+  padding: clamp(32px, 4vw, 48px) 0 clamp(36px, 4.5vw, 56px);
 }
 
 .page-hero {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   max-width: 800px;
 }
 
@@ -1174,15 +1180,15 @@ svg.arrow-svg {
 /* Subpage Card Adjustments */
 .card h2 {
   font-size: 1.22rem;
-  margin: 10px 0;
+  margin: 6px 0 8px;
   line-height: 1.35;
 }
 
 .card ul {
   list-style: none;
-  margin-top: 20px;
+  margin-top: 12px;
   display: grid;
-  gap: 10px;
+  gap: 6px;
 }
 
 .card li {
@@ -1207,9 +1213,9 @@ svg.arrow-svg {
 
 /* Resume page elements */
 .resume-section {
-  margin-bottom: 50px;
+  margin-bottom: 24px;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .resume-section:last-of-type {
@@ -1218,26 +1224,26 @@ svg.arrow-svg {
 }
 
 .resume-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 24px;
+  font-size: 1.45rem;
+  margin-bottom: 12px;
   color: var(--primary);
   letter-spacing: -0.02em;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .resume-lead-text {
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 0.96rem;
+  line-height: 1.6;
   color: var(--text);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Resume Header & Contact Bar */
 .resume-hero {
-  margin-bottom: 40px;
-  padding-bottom: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1251,15 +1257,15 @@ svg.arrow-svg {
   font-size: clamp(0.98rem, 1.6vw, 1.08rem);
   color: var(--muted);
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .resume-contact-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 24px;
-  margin-bottom: 28px;
-  padding: 16px 20px;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -1288,21 +1294,21 @@ a.resume-contact-item:hover {
 .resume-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
 }
 
 /* Executive Achievements Box */
 .resume-achievements-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 10px;
 }
 
 .resume-achievement-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  padding: 18px 20px;
+  gap: 10px;
+  padding: 10px 14px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -1345,8 +1351,8 @@ a.resume-contact-item:hover {
   border: 1px solid var(--line);
   background: var(--bg-card);
   border-radius: var(--radius-lg);
-  padding: 30px;
-  margin-bottom: 24px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -1366,8 +1372,8 @@ a.resume-contact-item:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-bottom: 6px;
   flex-wrap: wrap;
 }
 
@@ -1423,29 +1429,29 @@ a.resume-contact-item:hover {
 }
 
 .resume-sub-heading {
-  font-size: 0.96rem;
+  font-size: 0.92rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--heading-color);
-  margin: 18px 0 10px;
-  padding-bottom: 6px;
+  margin: 10px 0 4px;
+  padding-bottom: 3px;
   border-bottom: 1px dashed var(--line);
 }
 
 .resume-bullet-list {
   list-style: none;
   display: grid;
-  gap: 10px;
-  margin: 12px 0 16px;
+  gap: 5px;
+  margin: 6px 0 8px;
 }
 
 .resume-bullet-list li {
   position: relative;
-  padding-left: 22px;
-  font-size: 0.95rem;
+  padding-left: 18px;
+  font-size: 0.91rem;
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .resume-bullet-list li::before {
@@ -1465,9 +1471,9 @@ a.resume-contact-item:hover {
 .resume-tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-  padding-top: 14px;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
   border-top: 1px solid var(--line);
 }
 
@@ -1498,11 +1504,11 @@ a.resume-contact-item:hover {
 .resume-skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 12px;
 }
 
 .resume-skill-card {
-  padding: 24px;
+  padding: 14px 16px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -1518,8 +1524,8 @@ a.resume-contact-item:hover {
 .resume-skill-card-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .resume-skill-icon {
@@ -1565,19 +1571,19 @@ a.resume-contact-item:hover {
 .resume-two-col {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 24px;
+  gap: 14px;
 }
 
 .resume-cert-list {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .resume-cert-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
+  padding: 8px 12px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -1619,11 +1625,11 @@ a.resume-contact-item:hover {
 }
 
 .resume-edu-card {
-  padding: 24px;
+  padding: 14px 16px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--line);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .resume-edu-title {
@@ -1646,11 +1652,11 @@ a.resume-contact-item:hover {
 }
 
 .resume-project-item {
-  padding: 18px 20px;
+  padding: 12px 14px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--line);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   transition: all 0.25s ease;
 }
 
@@ -1704,35 +1710,38 @@ button:focus-visible {
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
+    gap: 28px;
   }
   
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
   
   .two-column {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 22px;
   }
   
   .contact-card {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 40px;
+    gap: 24px;
+    padding: 24px;
   }
   
   .writing-card {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 18px;
   }
 
   .resume-skills-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
   .resume-two-col {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
 
@@ -1747,7 +1756,7 @@ button:focus-visible {
   }
 
   .page-hero {
-    margin-bottom: 32px;
+    margin-bottom: 18px;
   }
 
   .page-hero h1 {
@@ -1755,24 +1764,24 @@ button:focus-visible {
   }
 
   .page-shell {
-    padding: 45px 0 65px;
+    padding: 24px 0 36px;
   }
 
   .section {
-    padding: 70px 0;
+    padding: clamp(28px, 4.5vw, 40px) 0;
   }
   
   .hero {
-    padding: 80px 0 50px;
+    padding: 32px 0 24px;
   }
   
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 24px;
   }
   
   .hero-card {
-    max-width: 450px;
+    max-width: 420px;
     margin: 0 auto;
   }
   
@@ -1782,19 +1791,19 @@ button:focus-visible {
   
   .main-nav {
     position: fixed;
-    top: 80px;
+    top: 64px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 64px);
     background: var(--mobile-nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 24px;
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-top: 1px solid var(--line);
     z-index: 99;
@@ -1935,8 +1944,8 @@ section {
 .md-filter-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 36px;
+  gap: 8px;
+  margin-bottom: 20px;
   align-items: center;
 }
 
@@ -2088,16 +2097,16 @@ section {
 /* Featured Writing Grid on Homepage */
 .featured-writing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-  margin-bottom: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
 }
 
 .article-preview-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 28px;
+  padding: 20px 22px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -2133,7 +2142,7 @@ section {
 .article-preview-card h3 {
   font-size: 1.15rem;
   line-height: 1.4;
-  margin: 10px 0;
+  margin: 8px 0;
   color: var(--heading-color);
 }
 
@@ -2148,8 +2157,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 18px;
-  padding-top: 14px;
+  margin-top: 14px;
+  padding-top: 10px;
   border-top: 1px solid var(--line);
   font-size: 0.85rem;
   color: var(--primary);
@@ -2158,9 +2167,9 @@ section {
 
 /* Architecture Notes Accordion */
 .md-accordion {
-  margin-top: 18px;
+  margin-top: 14px;
   border-top: 1px solid var(--line);
-  padding-top: 14px;
+  padding-top: 10px;
 }
 
 .md-accordion summary {
