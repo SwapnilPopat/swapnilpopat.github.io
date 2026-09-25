@@ -17,7 +17,7 @@ const SHELL_ASSETS = [
   '/resume/index.html',
   '/404.html',
   '/manifest.json',
-  '/assets/css/style.min.css?v=1.6',
+  '/assets/css/style.min.css?v=1.7',
   '/assets/js/main.js',
   '/assets/js/analytics-events.js',
   '/assets/img/favicon.svg',
