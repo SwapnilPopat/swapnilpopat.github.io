@@ -2756,3 +2756,32 @@ section {
   border-color: var(--primary);
   transform: scale(1.1);
 }
+
+/* ==========================================================================
+   Resume page utility classes (replaces former inline styles)
+   ========================================================================== */
+
+/* Sub-section h2 headings inside the credential / education column */
+.resume-edu-h2 {
+  margin-top: 24px;
+}
+
+/* Smaller h3 title variant (e.g. Udemy Instructor card) */
+.resume-edu-title--sm {
+  font-size: 1rem;
+}
+
+/* Tech-tag row inside project cards — sits directly after description,
+   so the default top-margin / top-padding of .resume-tech-tags is suppressed */
+.resume-tech-tags--flush {
+  margin-top: 0;
+  padding-top: 8px;
+  border-top: none;
+}
+
+/* Copy-tooltip hidden in print to avoid "Copied!" leaking into PDF */
+@media print {
+  .copy-tooltip {
+    display: none !important;
+  }
+}

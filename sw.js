@@ -1,4 +1,7 @@
 // Service Worker for Swapnil Popat Portfolio (swapnilpopat.github.io)
+// ⚠️  VERSION SYNC: When bumping CACHE_NAME, also update the CSS query string
+//     in index.html / resume/index.html  (?v=X.Y)  and vice-versa, so cached
+//     assets are always invalidated together.
 const CACHE_NAME = 'sp-portfolio-v1.7';
 
 const SHELL_ASSETS = [

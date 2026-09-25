@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 1-Click Copy (Email, Phone, etc.) Micro-Interaction
-  const copyButtons = document.querySelectorAll(".copy-btn, .copy-email-btn");
+  const copyButtons = document.querySelectorAll(".copy-btn");
   copyButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
