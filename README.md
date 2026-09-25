@@ -25,7 +25,7 @@
 
 This repository contains the source code for the personal portfolio and digital knowledge base of **Swapnil Popat**. 
 
-Swapnil is an **IT Solutions Architect & Team Lead** with 12+ years of enterprise experience specializing in:
+Swapnil is an **IT Solutions Architect & Team Lead** with 13+ years of enterprise experience specializing in:
 - **Industry 4.0 & Smart Factory Solutions**: OEE, RTPPM, shop-floor visibility, production dashboards, and ISA-95 standard alignment.
 - **IIoT & Platform Architecture**: PTC ThingWorx platform architecture, digital twin modeling, Kepware industrial connectivity, OPC-UA, MQTT, and telemetry pipelines.
 - **Enterprise Architecture & Governance**: SAP LeanIX, Sparx Systems Enterprise Architect, arc42 documentation, integration landscapes, and non-functional requirements.
@@ -83,7 +83,7 @@ swapnilpopat.github.io/
 │   │   └── profile.webp         # Compressed profile portrait
 │   └── js/
 │       ├── analytics-events.js  # GA4 custom event tracking
-│       └── main.js              # Theme toggle, mobile menu, filters, and dynamic footer year
+│       └── main.js              # Theme toggle, mobile menu, filters, dynamic experience years, and dynamic footer year
 ├── projects/
 │   └── index.html               # Projects showcase page with MD3 filter chips
 ├── resume/

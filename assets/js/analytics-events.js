@@ -26,12 +26,40 @@ document.addEventListener("click", function (event) {
     });
   }
 
+  // Track telephone clicks
+  if (href.startsWith("tel:")) {
+    gtag("event", "phone_click", {
+      event_category: "contact",
+      event_label: label,
+      link_url: href
+    });
+  }
+
   // Track external links
   if (href.startsWith("http") && !href.includes("swapnilpopat.github.io")) {
     gtag("event", "external_link_click", {
       event_category: "outbound",
       event_label: label,
       link_url: href
+    });
+  }
+});
+
+// Track Resume Printing / PDF Saving (via Button or Keyboard Shortcut)
+document.addEventListener("click", function (event) {
+  if (event.target.closest("#print-resume-btn, .print-btn") && typeof gtag === "function") {
+    gtag("event", "resume_print", {
+      event_category: "engagement",
+      event_label: "print_button"
+    });
+  }
+});
+
+window.addEventListener("beforeprint", function () {
+  if (typeof gtag === "function") {
+    gtag("event", "resume_print", {
+      event_category: "engagement",
+      event_label: "browser_print"
     });
   }
 });

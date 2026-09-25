@@ -1,5 +1,5 @@
 // Service Worker for Swapnil Popat Portfolio (swapnilpopat.github.io)
-const CACHE_NAME = 'sp-portfolio-v1.6';
+const CACHE_NAME = 'sp-portfolio-v1.7';
 
 const SHELL_ASSETS = [
   '/',
@@ -68,7 +68,13 @@ self.addEventListener('fetch', (event) => {
           return response;
         })
         .catch(async () => {
-          const cachedResponse = await caches.match(event.request);
+          let cachedResponse = await caches.match(event.request);
+          if (!cachedResponse) {
+            const cleanPath = url.pathname.replace(/\/$/, '');
+            cachedResponse = await caches.match(cleanPath + '/') || 
+                             await caches.match(cleanPath + '/index.html') ||
+                             await caches.match(cleanPath);
+          }
           if (cachedResponse) return cachedResponse;
           return caches.match('/404.html');
         })

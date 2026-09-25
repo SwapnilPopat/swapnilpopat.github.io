@@ -15,7 +15,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <meta property="og:title" content="Projects | Swapnil Popat | Industry 4.0 Solutions Architect">
-<meta property="og:description" content="12+ years in IIoT, ThingWorx, Smart Factory, Enterprise Architecture, and manufacturing digital transformation.">
+<meta property="og:description" content="13+ years in IIoT, ThingWorx, Smart Factory, Enterprise Architecture, and manufacturing digital transformation.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://swapnilpopat.github.io/projects/">
 <meta property="og:image" content="https://swapnilpopat.github.io/assets/img/og-image.png">
@@ -181,11 +181,21 @@
       </p>
     </section>
 
+    <div class="project-search-container">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="search" id="project-search" class="project-search-input" placeholder="Search projects by tech, keyword, or domain (e.g. Docker, Python, IIoT)..." aria-label="Search projects by keyword" autocomplete="off" />
+    </div>
+
     <div class="md-filter-bar" role="toolbar" aria-label="Filter projects by domain">
       <button class="md-chip active" data-filter="all">All Projects <span class="md-chip-count">10</span></button>
       <button class="md-chip" data-filter="iiot">Industry 4.0 &amp; IIoT <span class="md-chip-count">6</span></button>
       <button class="md-chip" data-filter="architecture">Enterprise &amp; PLM <span class="md-chip-count">3</span></button>
       <button class="md-chip" data-filter="fullstack">Full-Stack &amp; Cloud <span class="md-chip-count">4</span></button>
+    </div>
+
+    <div id="no-projects-message" class="no-results-card" style="display: none;" role="status">
+      <p class="no-results-title">No matching projects found</p>
+      <p class="no-results-desc">Try clearing your search keyword or selecting a different category chip.</p>
     </div>
 
     <section class="grid cards-grid">

@@ -4,18 +4,56 @@
   "description": "Portfolio of Swapnil Popat — IT Solutions Architect, Team Lead, and Industry 4.0 / IIoT specialist.",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#090e17",
   "theme_color": "#0f172a",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
   "icons": [
     {
       "src": "/assets/img/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/assets/img/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Resume / CV",
+      "short_name": "Resume",
+      "description": "View official curriculum vitae and career history",
+      "url": "/resume/",
+      "icons": [{ "src": "/assets/img/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Selected Projects",
+      "short_name": "Projects",
+      "description": "View Industry 4.0 and software architecture projects",
+      "url": "/projects/",
+      "icons": [{ "src": "/assets/img/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Architecture Notes",
+      "short_name": "Architecture",
+      "description": "Read design patterns and technical decision guardrails",
+      "url": "/architecture-notes/",
+      "icons": [{ "src": "/assets/img/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Writing & Articles",
+      "short_name": "Writing",
+      "description": "Read technical essays and articles",
+      "url": "/writing/",
+      "icons": [{ "src": "/assets/img/favicon.svg", "sizes": "any" }]
     }
   ]
 }
