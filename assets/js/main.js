@@ -117,16 +117,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 1-Click Copy Email Micro-Interaction
-  const copyButtons = document.querySelectorAll(".copy-email-btn");
+  // 1-Click Copy (Email, Phone, etc.) Micro-Interaction
+  const copyButtons = document.querySelectorAll(".copy-btn, .copy-email-btn");
   copyButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      const email = btn.getAttribute("data-email") || "popatswapnil@gmail.com";
+      const textToCopy = btn.getAttribute("data-copy") || btn.getAttribute("data-email") || "popatswapnil@gmail.com";
       const tooltip = btn.querySelector(".copy-tooltip");
 
-      navigator.clipboard.writeText(email).then(() => {
+      navigator.clipboard.writeText(textToCopy).then(() => {
         if (tooltip) {
           tooltip.classList.add("show");
           setTimeout(() => {
@@ -134,9 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }, 2000);
         }
         if (typeof gtag === "function") {
-          gtag("event", "copy_email", {
+          gtag("event", "copy_text", {
             event_category: "contact",
-            event_label: email
+            event_label: textToCopy
           });
         }
       });
@@ -185,5 +185,12 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     // Fallback if IntersectionObserver is not supported
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("revealed"));
+  }
+
+  // PWA Service Worker Registration
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    });
   }
 });

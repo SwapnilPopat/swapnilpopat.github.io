@@ -30,6 +30,7 @@ jobs:
           test -f manifest.json
 
           echo "Verifying stylesheets and scripts..."
+          test -f sw.js
           test -f assets/css/style.css
           test -f assets/css/style.min.css
           test -f assets/js/main.js

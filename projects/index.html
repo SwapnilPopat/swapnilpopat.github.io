@@ -12,12 +12,16 @@
 
 <meta name="author" content="Swapnil Popat">
 <meta name="robots" content="index, follow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
 <meta property="og:title" content="Projects | Swapnil Popat | Industry 4.0 Solutions Architect">
 <meta property="og:description" content="12+ years in IIoT, ThingWorx, Smart Factory, Enterprise Architecture, and manufacturing digital transformation.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://swapnilpopat.github.io/projects/">
 <meta property="og:image" content="https://swapnilpopat.github.io/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Swapnil Popat - Projects Portfolio">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projects | Swapnil Popat | Industry 4.0 Solutions Architect">
@@ -65,42 +69,50 @@
     })();
   </script>
   
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Swapnil Popat",
-  "jobTitle": "IT Solutions Architect & Team Lead",
-  "url": "https://swapnilpopat.github.io/",
-  "email": "mailto:popatswapnil@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Pune",
-    "addressCountry": "India"
-  },
-  "sameAs": [
-    "https://swapnilpopat.in/",
-    "https://blog.swapnilpopat.in/",
-    "https://www.linkedin.com/in/swapnilpopat/",
-    "https://www.instagram.com/swapnilpopat/",
-    "https://www.facebook.com/swapnilPopat",
-    "https://www.udemy.com/user/swapnil-popat/"
-  ],
-  "knowsAbout": [
-    "Industry 4.0",
-    "IIoT",
-    "ThingWorx",
-    "Smart Factory",
-    "Enterprise Architecture",
-    "Digital Twin",
-    "SAP LeanIX",
-    "ISA-95",
-    "OPC-UA",
-    "MQTT",
-    "Manufacturing Digital Transformation"
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projects Portfolio | Swapnil Popat",
+    "url": "https://swapnilpopat.github.io/projects/",
+    "description": "Selected Industry 4.0, IIoT, ThingWorx, digital twin, and full-stack software initiatives by Swapnil Popat.",
+    "author": {
+      "@type": "Person",
+      "name": "Swapnil Popat",
+      "jobTitle": "IT Solutions Architect & Team Lead",
+      "url": "https://swapnilpopat.github.io/",
+      "email": "mailto:popatswapnil@gmail.com",
+      "sameAs": [
+        "https://swapnilpopat.in/",
+        "https://blog.swapnilpopat.in/",
+        "https://www.linkedin.com/in/swapnilpopat/",
+        "https://github.com/swapnilpopat",
+        "https://x.com/swapnilpopat",
+        "https://www.instagram.com/swapnilpopat/",
+        "https://www.facebook.com/swapnilPopat",
+        "https://www.credly.com/users/swapnilpopat/badges"
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swapnilpopat.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://swapnilpopat.github.io/projects/"
+        }
+      ]
+    }
+  }
+  </script>
 
   <!-- Theme Toggle Detection Script -->
   <script>
@@ -109,6 +121,9 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
+  <!-- Preload Critical CSS -->
+  <link rel="preload" href="/assets/css/style.min.css?v=1.6" as="style" />
+
   <!-- Google Fonts (Optimized Async Load) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
