@@ -125,10 +125,11 @@
     />
   </noscript>
 
-  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.5" />
+  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.6" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-container">
       <a class="logo" href="/" aria-label="Swapnil Popat homepage">
@@ -150,12 +151,13 @@
         <a href="/projects/" class="nav-link active" aria-current="page">Projects</a>
         <a href="/writing/" class="nav-link">Writing</a>
         <a href="/architecture-notes/" class="nav-link">Architecture Notes</a>
+        <a href="/resume/" class="nav-link">Resume</a>
         <a href="mailto:popatswapnil@gmail.com" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="page-shell container">
+  <main class="page-shell container" id="main">
     <section class="page-hero">
       <p class="eyebrow">Portfolio</p>
       <h1>Selected Projects</h1>
@@ -165,10 +167,10 @@
     </section>
 
     <div class="md-filter-bar" role="toolbar" aria-label="Filter projects by domain">
-      <button class="md-chip active" data-filter="all">All Projects <span class="md-chip-count">8</span></button>
-      <button class="md-chip" data-filter="iiot">Industry 4.0 &amp; IIoT <span class="md-chip-count">4</span></button>
-      <button class="md-chip" data-filter="architecture">Enterprise &amp; PLM <span class="md-chip-count">2</span></button>
-      <button class="md-chip" data-filter="fullstack">Full-Stack &amp; Cloud <span class="md-chip-count">3</span></button>
+      <button class="md-chip active" data-filter="all">All Projects <span class="md-chip-count">10</span></button>
+      <button class="md-chip" data-filter="iiot">Industry 4.0 &amp; IIoT <span class="md-chip-count">6</span></button>
+      <button class="md-chip" data-filter="architecture">Enterprise &amp; PLM <span class="md-chip-count">3</span></button>
+      <button class="md-chip" data-filter="fullstack">Full-Stack &amp; Cloud <span class="md-chip-count">4</span></button>
     </div>
 
     <section class="grid cards-grid">
@@ -239,6 +241,34 @@
         </ul>
       </article>
 
+      <article class="card reveal" data-category="iiot architecture">
+        <span class="tag">Traceability</span>
+        <h2>TraceApp</h2>
+        <p>
+          MQTT/RabbitMQ-based traceability integration linking Codebeamer, PTC RV&amp;S, Sparx EA, and PTC Windchill.
+        </p>
+        <ul>
+          <li>ThingWorx Platform</li>
+          <li>MQTT &amp; RabbitMQ</li>
+          <li>PTC Windchill PLM</li>
+          <li>Sparx Systems EA</li>
+        </ul>
+      </article>
+
+      <article class="card reveal" data-category="iiot fullstack">
+        <span class="tag">Personal Project</span>
+        <h2>IoT Telemetry Architecture Workbench</h2>
+        <p>
+          Full-stack IoT telemetry platform simulating device registration, telemetry ingestion, time-series history, alerting, and dashboards.
+        </p>
+        <ul>
+          <li>Spring Boot &amp; Angular</li>
+          <li>PostgreSQL &amp; Docker</li>
+          <li>Azure Cloud Hosting</li>
+          <li>Time-Series Telemetry</li>
+        </ul>
+      </article>
+
       <article class="card reveal" data-category="fullstack">
         <span class="tag">Full Stack</span>
         <h2>ReferralNet</h2>
@@ -275,6 +305,7 @@
     <div class="container footer-container">
       <p>© <span id="year"></span> Swapnil Popat. All rights reserved.</p>
       <div class="footer-links">
+        <a href="/resume/">Resume</a>
         <a href="/projects/">Projects</a>
         <a href="/writing/">Writing</a>
         <a href="/architecture-notes/">Architecture Notes</a>

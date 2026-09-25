@@ -38,21 +38,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const mainNav = document.querySelector(".main-nav");
 
   if (mobileNavToggle && mainNav) {
+    function closeMobileNav() {
+      mobileNavToggle.setAttribute("aria-expanded", "false");
+      mobileNavToggle.classList.remove("active");
+      mainNav.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
     mobileNavToggle.addEventListener("click", () => {
       const isExpanded = mobileNavToggle.getAttribute("aria-expanded") === "true";
       mobileNavToggle.setAttribute("aria-expanded", !isExpanded);
       mobileNavToggle.classList.toggle("active");
       mainNav.classList.toggle("active");
+      document.body.style.overflow = !isExpanded ? "hidden" : "";
     });
 
     // Close menu when a link is clicked
     const navLinks = mainNav.querySelectorAll("a");
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        mobileNavToggle.setAttribute("aria-expanded", "false");
-        mobileNavToggle.classList.remove("active");
-        mainNav.classList.remove("active");
+        closeMobileNav();
       });
+    });
+
+    // Close on Escape key press (WCAG 2.1)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mainNav.classList.contains("active")) {
+        closeMobileNav();
+        mobileNavToggle.focus();
+      }
+    });
+
+    // Close when clicking outside menu
+    document.addEventListener("click", (e) => {
+      if (
+        mainNav.classList.contains("active") &&
+        !mainNav.contains(e.target) &&
+        !mobileNavToggle.contains(e.target)
+      ) {
+        closeMobileNav();
+      }
     });
   }
 

@@ -21,6 +21,39 @@
   <meta name="twitter:description" content="Articles and technical notes by Swapnil Popat on IIoT, Industry 4.0, architecture, ThingWorx, AI, and digital transformation." />
   <meta name="twitter:image" content="https://swapnilpopat.github.io/assets/img/og-image.png" />
 
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Writing & Technical Notes | Swapnil Popat",
+    "url": "https://swapnilpopat.github.io/writing/",
+    "description": "Technical essays and articles by Swapnil Popat on IIoT, Smart Factory architecture, ISA-95, digital twins, and AI software engineering.",
+    "author": {
+      "@type": "Person",
+      "name": "Swapnil Popat",
+      "url": "https://swapnilpopat.github.io/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swapnilpopat.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Writing",
+          "item": "https://swapnilpopat.github.io/writing/"
+        }
+      ]
+    }
+  }
+  </script>
+
   <!-- Favicon & PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
@@ -76,7 +109,7 @@
     />
   </noscript>
 
-  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.5" />
+  <link rel="stylesheet" href="/assets/css/style.min.css?v=1.6" />
   <!-- Theme Toggle Detection Script -->
   <script>
     (function() {
@@ -87,6 +120,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-container">
       <a class="logo" href="/" aria-label="Swapnil Popat homepage">
@@ -108,12 +142,13 @@
         <a href="/projects/" class="nav-link">Projects</a>
         <a href="/writing/" class="nav-link active" aria-current="page">Writing</a>
         <a href="/architecture-notes/" class="nav-link">Architecture Notes</a>
+        <a href="/resume/" class="nav-link">Resume</a>
         <a href="mailto:popatswapnil@gmail.com" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="page-shell container">
+  <main class="page-shell container" id="main">
     <section class="page-hero">
       <p class="eyebrow">Writing</p>
       <h1>Articles, Blog Posts & Technical Notes</h1>
@@ -185,6 +220,7 @@
     <div class="container footer-container">
       <p>© <span id="year"></span> Swapnil Popat. All rights reserved.</p>
       <div class="footer-links">
+        <a href="/resume/">Resume</a>
         <a href="/projects/">Projects</a>
         <a href="/writing/">Writing</a>
         <a href="/architecture-notes/">Architecture Notes</a>

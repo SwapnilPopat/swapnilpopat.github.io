@@ -1769,10 +1769,13 @@ button:focus-visible {
     align-items: center;
     justify-content: flex-start;
     padding-top: 50px;
+    padding-bottom: 50px;
     gap: 32px;
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-top: 1px solid var(--line);
     z-index: 99;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   .main-nav.active {
