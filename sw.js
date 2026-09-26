@@ -2,7 +2,7 @@
 // ⚠️  VERSION SYNC: When bumping CACHE_NAME, also update the CSS query string
 //     in index.html / resume/index.html  (?v=X.Y)  and vice-versa, so cached
 //     assets are always invalidated together.
-const CACHE_NAME = 'sp-portfolio-v1.7';
+const CACHE_NAME = 'sp-portfolio-v1.8';
 
 const SHELL_ASSETS = [
   '/',
@@ -17,7 +17,7 @@ const SHELL_ASSETS = [
   '/resume/index.html',
   '/404.html',
   '/manifest.json',
-  '/assets/css/style.min.css?v=1.7',
+  '/assets/css/style.min.css?v=1.8',
   '/assets/js/main.js',
   '/assets/js/analytics-events.js',
   '/assets/img/favicon.svg',
